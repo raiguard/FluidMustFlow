@@ -2,6 +2,7 @@
 Version: 1.2.17
 Date: ????
   Changes:
+    - Placing duct ghosts will no longer replace them with small ducts - bots will place the larger ducts directly
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.16
 Date: 2020-12-25

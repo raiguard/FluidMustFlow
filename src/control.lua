@@ -295,79 +295,10 @@ function lookingforDuctJoin(entity)
   end
 end
 
--- -- Ducts join control on blueprints
-function lookingforReverseJoinOfGhostEntity(entity)
-  --if is a joined piece
-  local join_pattern = nil
-  for _, pattern in pairs(fmf_joinable) do
-    if pattern.successor == entity.ghost_name then
-      join_pattern = pattern
-      break
-    end
-  end
-
-  if join_pattern then
-    -- get perimenters
-    local entity_perimenter = entity_utils.getPrototypeSize(game.entity_prototypes[entity.ghost_name]) -- entity_utils.getEntityOrientedSize(entity)
-    local childs_perimenter = entity_utils.getPrototypeSize(game.entity_prototypes[join_pattern.entity])
-
-    --copy other old entity stats and destroy it
-    local on_surface = entity.surface
-    local of_force = entity.force
-    local player_owner = entity.last_user
-    local at_position = entity.position
-    local in_direction = entity.direction
-    entity.destroy()
-
-    --iter params
-    local child_entity = nil
-    local residual_space = nil
-    local de_increment = nil
-    local on_x = true
-
-    if in_direction == 2 or in_direction == 6 then -- horizontal reverse join
-      residual_space = entity_perimenter.height
-      de_increment = childs_perimenter.height
-      at_position.x = at_position.x + entity_utils.downDifferenceToSizeCenter(entity_perimenter)
-    else -- vertical reverse join
-      residual_space = entity_perimenter.height
-      de_increment = childs_perimenter.height
-      at_position.y = at_position.y + entity_utils.downDifferenceToSizeCenter(entity_perimenter)
-      on_x = false
-    end
-
-    while residual_space > 0 do
-      child_entity = on_surface.create_entity({
-        name = "entity-ghost",
-        ghost_name = join_pattern.entity,
-        position = at_position,
-        direction = in_direction,
-        force = of_force,
-        player = player_owner,
-        raise_built = true,
-      })
-
-      lookingforReverseJoinOfGhostEntity(child_entity)
-
-      if on_x then
-        at_position.x = at_position.x - de_increment
-      else
-        at_position.y = at_position.y - de_increment
-      end
-      residual_space = residual_space - de_increment
-    end
-  end
-end
-
 -- Scheduling of ducts join procedures
 function ductsJoin(entity)
-  if entity_utils.isAnEntity(entity) then
-    --if entity is a ghost (ignore all entities that isn't duct)
-    if entity.name == "entity-ghost" and isaPartofDucts(entity.ghost_name) then
-      lookingforReverseJoinOfGhostEntity(entity)
-    elseif isaPartofDucts(entity.name) then
-      lookingforDuctJoin(entity)
-    end
+  if entity_utils.isAnEntity(entity) and isaPartofDucts(entity.name) then
+    lookingforDuctJoin(entity)
   end
 end
 

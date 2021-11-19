@@ -273,6 +273,7 @@ duct.name = "duct"
 duct.icon = fmf_icons_path .. "duct.png"
 if settings.startup["fmf-enable-duct-auto-join"].value then
   duct.minable = { mining_time = 0.6, result = "duct-small", count = 2 }
+  duct.placeable_by = { item = "duct-small", count = 2 }
 else
   duct.minable = { mining_time = 0.6, result = "duct", count = 1 }
 end
@@ -307,6 +308,7 @@ duct_long.name = "duct-long"
 duct_long.icon = fmf_icons_path .. "duct-long.png"
 if settings.startup["fmf-enable-duct-auto-join"].value then
   duct_long.minable = { mining_time = 0.8, result = "duct-small", count = 4 }
+  duct_long.placeable_by = { item = "duct-small", count = 4 }
 else
   duct_long.minable = { mining_time = 0.8, result = "duct-long", count = 1 }
 end
