@@ -1,227 +1,129 @@
--- paths
+local util = require("prototypes.util")
+
 local fmf_icons_path = "__FluidMustFlow__/graphics/icon/entities/"
 
--- libs
-local SpritesBuilder = require("linver-lib/SpritesBuilder")
-local sprites_builder = SpritesBuilder:new()
-local pipes_overlay = require("__FluidMustFlow__/prototypes/scripts/pipes-overlay")
-
--- -- -- Sprites
---Initializing sprites
-
-local empty_sprite = sprites_builder.getEmptySprite() -- for replace missing graphic
-
--- Small Ducts picture
-
-sprites_builder:setWidth(64)
-sprites_builder:setHRWidth(128)
-sprites_builder:setHeight(128)
-sprites_builder:setHRHeight(256)
-sprites_builder:setScale(1)
-sprites_builder:setHRScale(0.5)
-sprites_builder:setPriority("high")
-sprites_builder:setHRPriority("high")
-sprites_builder:setShadowShift({ 0.5, 0 })
-sprites_builder:setHRShadowShift({ 0.5, 0 })
-
-sprites_builder:setFilename("__FluidMustFlow__/graphics/entity/duct/duct_small/duct_small_straight_horizontal.png")
-sprites_builder:setHRFilename("__FluidMustFlow__/graphics/entity/duct/duct_small/hr_duct_small_straight_horizontal.png")
-sprites_builder:setShadow("__FluidMustFlow__/graphics/entity/duct/duct_small/duct_small_straight_horizontal_shadow.png")
-sprites_builder:setHRShadow(
-  "__FluidMustFlow__/graphics/entity/duct/duct_small/hr_duct_small_straight_horizontal_shadow.png"
-)
-local duct_small_east = sprites_builder:buildImage()
-local duct_small_west = duct_small_east -- is the same perspective
-
-sprites_builder:setWidth(128)
-sprites_builder:setHRWidth(256)
-sprites_builder:setHeight(80)
-sprites_builder:setHRHeight(160)
-sprites_builder:setShadowShift(nil)
-sprites_builder:setHRShadowShift(nil)
-
-sprites_builder:setFilename("__FluidMustFlow__/graphics/entity/duct/duct_small/duct_small_straight_vertical.png")
-sprites_builder:setHRFilename("__FluidMustFlow__/graphics/entity/duct/duct_small/hr_duct_small_straight_vertical.png")
-sprites_builder:setShadow("__FluidMustFlow__/graphics/entity/duct/duct_small/duct_small_straight_vertical_shadow.png")
-sprites_builder:setHRShadow(
-  "__FluidMustFlow__/graphics/entity/duct/duct_small/hr_duct_small_straight_vertical_shadow.png"
-)
-
-local duct_small_north = sprites_builder:buildImage()
-local duct_small_south = duct_small_north -- is the same perspective
-
-local duct_small_picture = sprites_builder.getPicture4Parts(
-  duct_small_north,
-  duct_small_east,
-  duct_small_south,
-  duct_small_west
-)
--- Long Duct picture
-
-sprites_builder:setWidth(128)
-sprites_builder:setHRWidth(256)
-sprites_builder:setHeight(180)
-sprites_builder:setHRHeight(360)
-sprites_builder:setFilenameWithShadow("__FluidMustFlow__/graphics/entity/duct/duct_long/", "duct_long_horizontal")
-local duct_long_north = sprites_builder:buildImage()
-local duct_long_south = duct_long_north -- is the same perspective
-
-sprites_builder:setWidth(256)
-sprites_builder:setHRWidth(512)
-sprites_builder:setHeight(128)
-sprites_builder:setHRHeight(256)
-sprites_builder:setFilenameWithShadow("__FluidMustFlow__/graphics/entity/duct/duct_long/", "duct_long_vertical")
-local duct_long_east = sprites_builder:buildImage()
-local duct_long_west = duct_long_east -- is the same perspective
-
-local duct_long_picture = sprites_builder.getPicture4Parts(
-  duct_long_north,
-  duct_long_east,
-  duct_long_south,
-  duct_long_west
-)
-
--- Duct picture
-
-sprites_builder:setWidth(128)
-sprites_builder:setHRWidth(256)
-
-sprites_builder:setFilenameWithShadow("__FluidMustFlow__/graphics/entity/duct/duct/", "duct_horizontal")
-local duct_north = sprites_builder:buildImage()
-local duct_south = duct_north -- is the same perspective
-sprites_builder:setFilenameWithShadow("__FluidMustFlow__/graphics/entity/duct/duct/", "duct_vertical")
-local duct_east = sprites_builder:buildImage()
-local duct_west = duct_east -- is the same perspective
-
-local duct_picture = sprites_builder.getPicture4Parts(duct_north, duct_east, duct_south, duct_west)
-
--- Duct_T_junction picture
-sprites_builder:setFilenameWithShadow("__FluidMustFlow__/graphics/entity/duct/duct_T/", "duct_T_up")
-local duct_t_junction_north = sprites_builder:buildImage()
-sprites_builder:setFilenameWithShadow("__FluidMustFlow__/graphics/entity/duct/duct_T/", "duct_T_right")
-local duct_t_junction_east = sprites_builder:buildImage()
-sprites_builder:setFilenameWithShadow("__FluidMustFlow__/graphics/entity/duct/duct_T/", "duct_T_down")
-local duct_t_junction_south = sprites_builder:buildImage()
-sprites_builder:setFilenameWithShadow("__FluidMustFlow__/graphics/entity/duct/duct_T/", "duct_T_left")
-local duct_t_junction_west = sprites_builder:buildImage()
-
-local duct_t_junction_picture = sprites_builder.getPicture4Parts(
-  duct_t_junction_north,
-  duct_t_junction_east,
-  duct_t_junction_south,
-  duct_t_junction_west
-)
-
--- Curved Duct
-sprites_builder:setFilenameWithShadow("__FluidMustFlow__/graphics/entity/duct/duct_corner/", "duct_corner_up_left")
-local duct_curve_north = sprites_builder:buildImage()
-sprites_builder:setFilenameWithShadow("__FluidMustFlow__/graphics/entity/duct/duct_corner/", "duct_corner_up_right")
-local duct_curve_east = sprites_builder:buildImage()
-sprites_builder:setFilenameWithShadow("__FluidMustFlow__/graphics/entity/duct/duct_corner/", "duct_corner_down_right")
-local duct_curve_south = sprites_builder:buildImage()
-sprites_builder:setFilenameWithShadow("__FluidMustFlow__/graphics/entity/duct/duct_corner/", "duct_corner_down_left")
-local duct_curve_west = sprites_builder:buildImage()
-
-local duct_curve_picture = sprites_builder.getPicture4Parts(
-  duct_curve_north,
-  duct_curve_east,
-  duct_curve_south,
-  duct_curve_west
-)
-
--- Cross Duct
-
-sprites_builder:setFilename("__FluidMustFlow__/graphics/entity/duct/duct_cross/duct_cross.png")
-sprites_builder:setHRFilename("__FluidMustFlow__/graphics/entity/duct/duct_cross/hr_duct_cross.png")
-sprites_builder:setShadow("__FluidMustFlow__/graphics/entity/duct/duct_cross/duct_cross_shadow.png")
-sprites_builder:setHRShadow("__FluidMustFlow__/graphics/entity/duct/duct_cross/hr_duct_cross_shadow.png")
-local duct_cross_all = sprites_builder:buildImage()
-
-local duct_cross_picture = sprites_builder.getPicture4Parts(
-  duct_cross_all,
-  duct_cross_all,
-  duct_cross_all,
-  duct_cross_all
-)
-
--- Underground duct
-
-sprites_builder:setFilename("__FluidMustFlow__/graphics/entity/duct/duct-ground/duct-ground-up.png")
-sprites_builder:setHRFilename("__FluidMustFlow__/graphics/entity/duct/duct-ground/hr_duct-ground-up.png")
-sprites_builder:setShadow("__FluidMustFlow__/graphics/entity/duct/duct-ground/duct-ground-up_shadow.png")
-sprites_builder:setHRShadow("__FluidMustFlow__/graphics/entity/duct/duct-ground/hr_duct-ground-up_shadow.png")
-local duct_underground_north = sprites_builder:buildImage()
-
-sprites_builder:setFilename("__FluidMustFlow__/graphics/entity/duct/duct-ground/duct-ground-left.png")
-sprites_builder:setHRFilename("__FluidMustFlow__/graphics/entity/duct/duct-ground/hr_duct-ground-left.png")
-sprites_builder:setShadow("__FluidMustFlow__/graphics/entity/duct/duct-ground/duct-ground-left_shadow.png")
-sprites_builder:setHRShadow("__FluidMustFlow__/graphics/entity/duct/duct-ground/hr_duct-ground-left_shadow.png")
-local duct_underground_east = sprites_builder:buildImage()
-
-sprites_builder:setFilename("__FluidMustFlow__/graphics/entity/duct/duct-ground/duct_ground_down.png")
-sprites_builder:setHRFilename("__FluidMustFlow__/graphics/entity/duct/duct-ground/hr_duct_ground_down.png")
-sprites_builder:setShadow("__FluidMustFlow__/graphics/entity/duct/duct-ground/duct_ground_down_shadow.png")
-sprites_builder:setHRShadow("__FluidMustFlow__/graphics/entity/duct/duct-ground/hr_duct_ground_down_shadow.png")
-local duct_underground_south = sprites_builder:buildImage()
-
-sprites_builder:setFilename("__FluidMustFlow__/graphics/entity/duct/duct-ground/duct_ground_right.png")
-sprites_builder:setHRFilename("__FluidMustFlow__/graphics/entity/duct/duct-ground/hr_duct_ground_right.png")
-sprites_builder:setShadow("__FluidMustFlow__/graphics/entity/duct/duct-ground/duct_ground_right_shadow.png")
-sprites_builder:setHRShadow("__FluidMustFlow__/graphics/entity/duct/duct-ground/hr_duct_ground_right_shadow.png")
-local duct_underground_west = sprites_builder:buildImage()
-
-local duct_underground_picture = {
-  up = duct_underground_north,
-  left = duct_underground_east,
-  down = duct_underground_south,
-  right = duct_underground_west,
-}
-
--- -- -- Entities
---Initializing entities
-
--- Duct Small
-duct_small = {
-  type = "storage-tank",
-  name = "duct-small",
-  icon = fmf_icons_path .. "duct-small.png",
-  icon_size = 64,
-  flags = { "placeable-player", "player-creation" },
-  minable = { mining_time = 0.4, result = "duct-small" },
-  fast_replaceable_group = "ducts",
-  next_upgrade = nil,
-  max_health = 100 * settings.startup["fmf-duct-health-multiplier"].value,
-  resistances = data.raw["pipe"]["pipe"].resistances,
-  corpse = "small-remnants",
-  dying_explosion = "storage-tank-explosion",
-  collision_box = { { -0.77, -0.45 }, { 0.77, 0.45 } },
-  selection_box = { { -1.2, -0.6 }, { 1.2, 0.6 } },
-  window_bounding_box = { { 0, 0 }, { 0, 0 } },
-  flow_length_in_ticks = 360,
-  fluid_box = {
-    base_area = BASE_AREA / 4,
-    height = HEIGHT,
-    base_level = 0,
-    pipe_covers = nil,
-    pipe_connections = {
-      { position = { -0, -1.1 }, max_underground_distance = 1 },
-      { position = { 0, 1.1 }, max_underground_distance = 1 },
+data:extend({
+  {
+    type = "storage-tank",
+    name = "duct-small",
+    icon = fmf_icons_path .. "duct-small.png",
+    icon_size = 64,
+    flags = { "placeable-player", "player-creation" },
+    minable = { mining_time = 0.4, result = "duct-small" },
+    fast_replaceable_group = "ducts",
+    max_health = 400,
+    corpse = "small-remnants",
+    dying_explosion = "storage-tank-explosion",
+    resistances = data.raw["pipe"]["pipe"].resistances,
+    collision_box = { { -0.77, -0.45 }, { 0.77, 0.45 } },
+    selection_box = { { -1.2, -0.6 }, { 1.2, 0.6 } },
+    fluid_box = {
+      base_area = BASE_AREA / 4,
+      height = HEIGHT,
+      base_level = 0,
+      pipe_covers = nil,
+      pipe_connections = {
+        { position = { -0, -1.1 }, max_underground_distance = 1 },
+        { position = { 0, 1.1 }, max_underground_distance = 1 },
+      },
     },
+    window_bounding_box = { { 0, 0 }, { 0, 0 } },
+    flow_length_in_ticks = 360,
+    pictures = {
+      picture = {
+        east = {
+          layers = {
+            {
+              filename = "__FluidMustFlow__/graphics/entity/duct/duct_small/duct_small_straight_horizontal.png",
+              height = 128,
+              hr_version = {
+                filename = "__FluidMustFlow__/graphics/entity/duct/duct_small/hr_duct_small_straight_horizontal.png",
+                height = 256,
+                priority = "high",
+                scale = 0.5,
+                width = 128,
+              },
+              priority = "high",
+              scale = 1,
+              width = 64,
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__FluidMustFlow__/graphics/entity/duct/duct_small/duct_small_straight_horizontal_shadow.png",
+              height = 128,
+              hr_version = {
+                draw_as_shadow = true,
+                filename = "__FluidMustFlow__/graphics/entity/duct/duct_small/hr_duct_small_straight_horizontal_shadow.png",
+                height = 256,
+                priority = "high",
+                scale = 0.5,
+                shift = {
+                  0.5,
+                  0,
+                },
+                width = 128,
+              },
+              priority = "high",
+              scale = 1,
+              shift = {
+                0.5,
+                0,
+              },
+              width = 64,
+            },
+          },
+        },
+        north = {
+          layers = {
+            {
+              filename = "__FluidMustFlow__/graphics/entity/duct/duct_small/duct_small_straight_vertical.png",
+              height = 80,
+              hr_version = {
+                filename = "__FluidMustFlow__/graphics/entity/duct/duct_small/hr_duct_small_straight_vertical.png",
+                height = 160,
+                priority = "high",
+                scale = 0.5,
+                width = 256,
+              },
+              priority = "high",
+              scale = 1,
+              width = 128,
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__FluidMustFlow__/graphics/entity/duct/duct_small/duct_small_straight_vertical_shadow.png",
+              height = 80,
+              hr_version = {
+                draw_as_shadow = true,
+                filename = "__FluidMustFlow__/graphics/entity/duct/duct_small/hr_duct_small_straight_vertical_shadow.png",
+                height = 160,
+                priority = "high",
+                scale = 0.5,
+                width = 256,
+              },
+              priority = "high",
+              scale = 1,
+              width = 128,
+            },
+          },
+        },
+        south = 0,
+        west = 0,
+      },
+      gas_flow = util.empty_sprite,
+      fluid_background = util.empty_sprite,
+      window_background = util.empty_sprite,
+      flow_sprite = util.empty_sprite,
+    },
+    working_sound = {
+      sound = { { filename = "__base__/sound/pipe.ogg", volume = 0.25 } },
+      match_volume_to_activity = true,
+      max_sounds_per_type = 3,
+    },
+    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
   },
-  pictures = {
-    picture = duct_small_picture,
-    gas_flow = empty_sprite,
-    fluid_background = empty_sprite,
-    window_background = empty_sprite,
-    flow_sprite = empty_sprite,
-  },
-  working_sound = {
-    sound = { { filename = "__base__/sound/pipe.ogg", volume = 0.25 } },
-    match_volume_to_activity = true,
-    max_sounds_per_type = 3,
-  },
-  vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-}
+})
+
 -- underground duct
 duct_underground = {
   type = "pipe-to-ground",
@@ -286,10 +188,10 @@ duct.fluid_box = {
 }
 duct.pictures = {
   picture = duct_picture,
-  gas_flow = empty_sprite,
-  fluid_background = empty_sprite,
-  window_background = empty_sprite,
-  flow_sprite = empty_sprite,
+  gas_flow = util.empty_sprite,
+  fluid_background = util.empty_sprite,
+  window_background = util.empty_sprite,
+  flow_sprite = util.empty_sprite,
 }
 
 -- Duct Long
@@ -317,10 +219,10 @@ duct_long.fluid_box = {
 }
 duct_long.pictures = {
   picture = duct_long_picture,
-  gas_flow = empty_sprite,
-  fluid_background = empty_sprite,
-  window_background = empty_sprite,
-  flow_sprite = empty_sprite,
+  gas_flow = util.empty_sprite,
+  fluid_background = util.empty_sprite,
+  window_background = util.empty_sprite,
+  flow_sprite = util.empty_sprite,
 }
 
 -- Duct T junction
@@ -336,10 +238,10 @@ duct_t_junction.fluid_box.pipe_connections = {
 }
 duct_t_junction.pictures = {
   picture = duct_t_junction_picture,
-  gas_flow = empty_sprite,
-  fluid_background = empty_sprite,
-  window_background = empty_sprite,
-  flow_sprite = empty_sprite,
+  gas_flow = util.empty_sprite,
+  fluid_background = util.empty_sprite,
+  window_background = util.empty_sprite,
+  flow_sprite = util.empty_sprite,
 }
 
 -- Curved duct
@@ -354,10 +256,10 @@ duct_curve.fluid_box.pipe_connections = {
 }
 duct_curve.pictures = {
   picture = duct_curve_picture,
-  gas_flow = empty_sprite,
-  fluid_background = empty_sprite,
-  window_background = empty_sprite,
-  flow_sprite = empty_sprite,
+  gas_flow = util.empty_sprite,
+  fluid_background = util.empty_sprite,
+  window_background = util.empty_sprite,
+  flow_sprite = util.empty_sprite,
 }
 
 -- Cross duct
@@ -375,10 +277,10 @@ duct_cross.fluid_box.pipe_connections = {
 }
 duct_cross.pictures = {
   picture = duct_cross_picture,
-  gas_flow = empty_sprite,
-  fluid_background = empty_sprite,
-  window_background = empty_sprite,
-  flow_sprite = empty_sprite,
+  gas_flow = util.empty_sprite,
+  fluid_background = util.empty_sprite,
+  window_background = util.empty_sprite,
+  flow_sprite = util.empty_sprite,
 }
 
 -- Adding entities
