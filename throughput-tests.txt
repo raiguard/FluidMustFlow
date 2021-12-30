@@ -1,0 +1,6 @@
+With dual fluidboxes: 257/s
+With single fluidbox: 131/s
+With single fluidbox (double height): 246/s
+
+With single fluidbox (height = 8): 24000/s
+With dual fluidboxes: 12000/s
