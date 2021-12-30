@@ -1,3 +1,6 @@
+BASE_AREA = 0.5
+HEIGHT = 48
+
 -- --Prototypes loading with priority order
 
 -- Loading items

@@ -205,9 +205,9 @@ duct_end_point_intake = {
   collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
   selection_box = { { -1, -1 }, { 1, 1 } },
   fluid_box = {
-    base_area = settings.startup["fmf-duct-base-level-multiplier"].value / 4,
+    base_area = BASE_AREA / 4,
     base_level = 0,
-    height = 8,
+    height = HEIGHT,
     pipe_covers = pipecoverspictures(), --pipes_overlay.getDuctFixedPipeCoversPictures(defines.direction.south),
     pipe_picture = pipes_overlay.getDuctFixedPipePictures(),
     pipe_connections = {
@@ -264,7 +264,7 @@ duct_end_point_intake = {
     drain = "1kW",
   },
   energy_usage = "180kW", -- base 30 x4
-  pumping_speed = 1200, -- base 200 x6
+  pumping_speed = 400, -- base 200 x6
   -- other
   circuit_wire_connection_points = circuit_connector_definitions["fmf-end-points"].points,
   circuit_connector_sprites = circuit_connector_definitions["fmf-end-points"].sprites,

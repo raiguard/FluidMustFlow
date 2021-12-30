@@ -148,9 +148,9 @@ data:extend({
     collision_box = { { -0.77, -0.9 }, { 0.77, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     fluid_box = {
-      base_area = settings.startup["fmf-duct-base-level-multiplier"].value / 4,
+      base_area = BASE_AREA / 4,
       base_level = 0,
-      height = 8,
+      height = HEIGHT,
       pipe_covers = nil,
       pipe_connections = {
         { position = { 0, -1.6 }, type = "output", max_underground_distance = 1 },

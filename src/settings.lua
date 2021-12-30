@@ -31,13 +31,4 @@ data:extend({
     maximum_value = 20,
     default_value = 4,
   },
-  {
-    type = "int-setting",
-    name = "fmf-duct-base-level-multiplier",
-    order = "ab",
-    setting_type = "startup",
-    minimum_value = 2,
-    maximum_value = 20,
-    default_value = 4,
-  },
 })
