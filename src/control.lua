@@ -218,6 +218,8 @@ end
 -- -- -- Ducts join
 
 function lookingforDuctJoin(entity)
+  if not entity then return end
+
   local join_pattern = nil
 
   for _, pattern in pairs(fmf_joinable) do
@@ -273,7 +275,10 @@ function lookingforDuctJoin(entity)
         direction = in_direction,
         force = of_force,
         player = player_owner,
+        raise_built = true,
       })
+
+      if not entity then return end
 
       -- Reinsert in the new entity the fluid of the destroyed entity
       if entity_contained_fluid_quantity then
