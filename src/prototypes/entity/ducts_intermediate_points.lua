@@ -153,10 +153,8 @@ data:extend({
       height = 8,
       pipe_covers = nil,
       pipe_connections = {
-        { position = { 0.5, -1.5 }, type = "output", max_underground_distance = 1 },
-        { position = { -0.5, -1.5 }, type = "output", max_underground_distance = 1 },
-        { position = { -0.6, 1.6 }, type = "input", max_underground_distance = 1 },
-        { position = { 0.6, 1.6 }, type = "input", max_underground_distance = 1 },
+        { position = { 0, -1.6 }, type = "output", max_underground_distance = 1 },
+        { position = { 0, 1.6 }, type = "input", max_underground_distance = 1 },
       },
     },
     -- sprites

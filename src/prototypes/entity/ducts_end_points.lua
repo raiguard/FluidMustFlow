@@ -213,8 +213,7 @@ duct_end_point_intake = {
     pipe_connections = {
       { position = { 0.5, 1.5 }, type = "input" },
       { position = { -0.5, 1.5 }, type = "input" },
-      { position = { 0.6, -1.6 }, type = "output", max_underground_distance = 1 }, --use underground for regular duct connections so as to bypass pipe covers.
-      { position = { -0.6, -1.6 }, type = "output", max_underground_distance = 1 },
+      { position = { 0, -1.6 }, type = "output", max_underground_distance = 1 }, --use underground for regular duct connections so as to bypass pipe covers.
       { position = { 1.5, -0.5 }, type = "input" },
       { position = { 1.5, 0.5 }, type = "input" },
       { position = { -1.5, -0.5 }, type = "input" },
@@ -284,8 +283,7 @@ duct_end_point_outtake.animations = duct_end_point_outtake_picture
 duct_end_point_outtake.fluid_box.pipe_connections = {
   { position = { 0.5, -1.5 }, type = "output" },
   { position = { -0.5, -1.5 }, type = "output" },
-  { position = { 0.6, 1.6 }, type = "input", max_underground_distance = 1 },
-  { position = { -0.6, 1.6 }, type = "input", max_underground_distance = 1 },
+  { position = { 0, 1.6 }, type = "input", max_underground_distance = 1 },
   { position = { 1.5, -0.5 }, type = "output" },
   { position = { 1.5, 0.5 }, type = "output" },
   { position = { -1.5, -0.5 }, type = "output" },

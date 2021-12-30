@@ -2,7 +2,7 @@
 local fmf_icons_path = "__FluidMustFlow__/graphics/icon/entities/"
 
 -- libs
-local SpritesBuilder = require("__FluidMustFlow__/linver-lib/SpritesBuilder")
+local SpritesBuilder = require("linver-lib/SpritesBuilder")
 local sprites_builder = SpritesBuilder:new()
 local pipes_overlay = require("__FluidMustFlow__/prototypes/scripts/pipes-overlay")
 
@@ -204,10 +204,8 @@ duct_small = {
     base_level = 0,
     pipe_covers = nil,
     pipe_connections = {
-      { position = { 0.6, -1.1 }, max_underground_distance = 1 },
-      { position = { -0.6, -1.1 }, max_underground_distance = 1 },
-      { position = { -0.6, 1.1 }, max_underground_distance = 1 },
-      { position = { 0.6, 1.1 }, max_underground_distance = 1 },
+      { position = { -0, -1.1 }, max_underground_distance = 1 },
+      { position = { 0, 1.1 }, max_underground_distance = 1 },
     },
   },
   pictures = {
@@ -244,16 +242,10 @@ duct_underground = {
     base_level = 0,
     pipe_covers = nil,
     pipe_connections = {
-      { position = { 0.6, -1.6 }, max_underground_distance = 1 },
+      { position = { 0, -1.6 }, max_underground_distance = 1 },
       {
-        position = { 0.6, 0.9 },
+        position = { 0, 0.9 },
         max_underground_distance = settings.startup["fmf-underground-duct-max-length"].value + 3, -- we shifted the positioning a bit so as not to collide with the 1 underground distance we use for 'regular' connections
-      },
-
-      { position = { -0.6, -1.6 }, max_underground_distance = 1 },
-      {
-        position = { -0.6, 0.9 },
-        max_underground_distance = settings.startup["fmf-underground-duct-max-length"].value + 3,
       },
     },
   },
@@ -288,10 +280,8 @@ duct.fluid_box = {
   base_level = 0,
   pipe_covers = nil, -- for debug: pipecoverspictures()
   pipe_connections = {
-    { position = { 0.6, -1.6 }, max_underground_distance = 1 },
-    { position = { -0.6, -1.6 }, max_underground_distance = 1 },
-    { position = { 0.6, 1.6 }, max_underground_distance = 1 },
-    { position = { -0.6, 1.6 }, max_underground_distance = 1 },
+    { position = { 0, -1.6 }, max_underground_distance = 1 },
+    { position = { 0, 1.6 }, max_underground_distance = 1 },
   },
 }
 duct.pictures = {
@@ -321,10 +311,8 @@ duct_long.fluid_box = {
   base_level = 0,
   pipe_covers = nil, -- for debug pipecoverspictures()
   pipe_connections = {
-    { position = { 0.6, -2.6 }, max_underground_distance = 1 },
-    { position = { -0.6, -2.6 }, max_underground_distance = 1 },
-    { position = { 0.6, 2.6 }, max_underground_distance = 1 },
-    { position = { -0.6, 2.6 }, max_underground_distance = 1 },
+    { position = { 0, -2.6 }, max_underground_distance = 1 },
+    { position = { 0, 2.6 }, max_underground_distance = 1 },
   },
 }
 duct_long.pictures = {
@@ -342,12 +330,9 @@ duct_t_junction.icon = fmf_icons_path .. "duct-t-junction.png"
 duct_t_junction.minable = { mining_time = 0.4, result = "duct-t-junction" }
 duct_t_junction.collision_box = { { -0.8, -0.9 }, { 0.8, 0.7 } }
 duct_t_junction.fluid_box.pipe_connections = {
-  { position = { 0.6, -1.6 }, max_underground_distance = 1 },
-  { position = { -0.6, -1.6 }, max_underground_distance = 1 },
-  { position = { 1.6, -0.6 }, max_underground_distance = 1 },
-  { position = { 1.6, 0.6 }, max_underground_distance = 1 },
-  { position = { -1.6, -0.6 }, max_underground_distance = 1 },
-  { position = { -1.6, 0.6 }, max_underground_distance = 1 },
+  { position = { 0, -1.6 }, max_underground_distance = 1 },
+  { position = { 1.6, 0 }, max_underground_distance = 1 },
+  { position = { -1.6, 0 }, max_underground_distance = 1 },
 }
 duct_t_junction.pictures = {
   picture = duct_t_junction_picture,
@@ -364,10 +349,8 @@ duct_curve.icon = fmf_icons_path .. "duct-curve.png"
 duct_curve.minable.result = "duct-curve"
 duct_curve.collision_box = { { -0.9, -0.9 }, { 0.75, 0.75 } }
 duct_curve.fluid_box.pipe_connections = {
-  { position = { 0.6, -1.6 }, max_underground_distance = 1 },
-  { position = { -0.6, -1.6 }, max_underground_distance = 1 },
-  { position = { -1.6, -0.6 }, max_underground_distance = 1 },
-  { position = { -1.6, 0.6 }, max_underground_distance = 1 },
+  { position = { 0, -1.6 }, max_underground_distance = 1 },
+  { position = { -1.6, 0 }, max_underground_distance = 1 },
 }
 duct_curve.pictures = {
   picture = duct_curve_picture,
@@ -385,14 +368,10 @@ duct_cross.icon = fmf_icons_path .. "duct-cross.png"
 duct_cross.minable.result = "duct-cross"
 duct_cross.collision_box = { { -0.85, -0.85 }, { 0.85, 0.85 } }
 duct_cross.fluid_box.pipe_connections = {
-  { position = { 0.6, -1.6 }, max_underground_distance = 1 },
-  { position = { -0.6, -1.6 }, max_underground_distance = 1 },
-  { position = { 0.6, 1.6 }, max_underground_distance = 1 },
-  { position = { -0.6, 1.6 }, max_underground_distance = 1 },
-  { position = { 1.6, -0.6 }, max_underground_distance = 1 },
-  { position = { 1.6, 0.6 }, max_underground_distance = 1 },
-  { position = { -1.6, -0.6 }, max_underground_distance = 1 },
-  { position = { -1.6, 0.6 }, max_underground_distance = 1 },
+  { position = { 0, -1.6 }, max_underground_distance = 1 },
+  { position = { 0, 1.6 }, max_underground_distance = 1 },
+  { position = { 1.6, 0 }, max_underground_distance = 1 },
+  { position = { -1.6, 0 }, max_underground_distance = 1 },
 }
 duct_cross.pictures = {
   picture = duct_cross_picture,
