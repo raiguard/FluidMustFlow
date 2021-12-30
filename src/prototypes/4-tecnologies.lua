@@ -1,9 +1,4 @@
--- -- -- Library
-local entity_utils = require("__FluidMustFlow__/linver-lib/entity-utils")
-
--- -- -- Tecnologies Effects
-
-iron_ducts_effect = {
+local effects = {
   {
     type = "unlock-recipe",
     recipe = "duct-small",
@@ -38,47 +33,61 @@ iron_ducts_effect = {
   },
 }
 
+-- TODO:
 if not settings.startup["fmf-enable-duct-auto-join"].value then
-  table.insert(iron_ducts_effect, {
+  table.insert(effects, {
     type = "unlock-recipe",
     recipe = "duct",
   })
-  table.insert(iron_ducts_effect, {
+  table.insert(effects, {
     type = "unlock-recipe",
     recipe = "duct-long",
   })
 end
 
--- calculate prerequisites
-local _prerequisites = {}
-local chemical_science_pack = entity_utils.getTechnologyThatUnlockRecipe("chemical-science-pack")
-local pseudo_fluid_handling = entity_utils.getTechnologyThatUnlockRecipe("pump")
+--- Gets the first technology that unlocks the given recipe
+--- @param recipe_name string
+--- @return string
+local function get_recipe_tech(recipe_name)
+  for name, technology in pairs(data.raw.technology) do
+    if technology.enabled ~= false and technology.effects then
+      for _, effect in pairs(technology.effects) do
+        if effect.type == "unlock-recipe" and effect.recipe == recipe_name then
+          return name
+        end
+      end
+    end
+  end
+end
+
+local prerequisites = {}
+local chemical_science_pack = get_recipe_tech("chemical-science-pack")
+local pseudo_fluid_handling = get_recipe_tech("pump")
 if chemical_science_pack then
-  table.insert(_prerequisites, chemical_science_pack)
+  table.insert(prerequisites, chemical_science_pack)
 end
 if pseudo_fluid_handling then
-  table.insert(_prerequisites, pseudo_fluid_handling)
+  table.insert(prerequisites, pseudo_fluid_handling)
 end
 
--- -- -- Tecnologies
-
-iron_ducts = {
-  type = "technology",
-  name = "Ducts",
-  icon_size = 128,
-  icon = "__FluidMustFlow__/graphics/icon/technologies/iron_duct_tecnology.png",
-  upgrade = false,
-  effects = iron_ducts_effect,
-  prerequisites = _prerequisites,
-  unit = {
-    count = 30,
-    ingredients = {
-      { "automation-science-pack", 2 },
-      { "logistic-science-pack", 2 },
-      { "chemical-science-pack", 1 },
+data:extend({
+  {
+    type = "technology",
+    -- FIXME: WHY IS THIS CAPITALIZED!?!?!?!?!?!
+    name = "Ducts",
+    icon_size = 128,
+    icon = "__FluidMustFlow__/graphics/icon/technologies/iron_duct_tecnology.png",
+    upgrade = false,
+    effects = effects,
+    prerequisites = prerequisites,
+    unit = {
+      count = 30,
+      ingredients = {
+        { "automation-science-pack", 2 },
+        { "logistic-science-pack", 2 },
+        { "chemical-science-pack", 1 },
+      },
+      time = 20,
     },
-    time = 20,
   },
-}
-
-data:extend({ iron_ducts })
+})

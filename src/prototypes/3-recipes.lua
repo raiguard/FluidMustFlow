@@ -1,5 +1,3 @@
--- -- -- Recipes
-
 data:extend({
   {
     type = "recipe",
@@ -104,6 +102,7 @@ data:extend({
   },
 })
 
+-- TODO:
 if not settings.startup["fmf-enable-duct-auto-join"].value then
   data:extend({
     {
