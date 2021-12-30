@@ -276,6 +276,7 @@ function lookingforDuctJoin(entity)
         force = of_force,
         player = player_owner,
         raise_built = true,
+        create_build_effect_smoke = false,
       })
 
       if not entity then return end
