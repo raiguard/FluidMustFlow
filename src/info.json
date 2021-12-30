@@ -7,5 +7,5 @@
   "homepage": "",
   "description": "Adds huge ducts to help transport a lot of liquids and gases",
   "factorio_version": "1.1",
-  "dependencies": ["base >= 1.1", "(?) Squeak Through >= 1.3.0"]
+  "dependencies": ["base >= 1.1", "flib >= 0.9.0", "(?) Squeak Through >= 1.3.0"]
 }
