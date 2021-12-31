@@ -1,8 +1,15 @@
-local connector_def = circuit_connector_definitions.create(universal_connector_template, {
-  { variation = 2, main_offset = util.by_pixel(0, 3), shadow_offset = util.by_pixel(-2, 3), show_shadow = true },
-  { variation = 4, main_offset = util.by_pixel(-4, 18), shadow_offset = util.by_pixel(-2, 18), show_shadow = true },
-  { variation = 4, main_offset = util.by_pixel(-4, 18), shadow_offset = util.by_pixel(-2, 18), show_shadow = true },
-  { variation = 4, main_offset = util.by_pixel(-4, 18), shadow_offset = util.by_pixel(-2, 18), show_shadow = true },
+local intake_connector_def = circuit_connector_definitions.create(universal_connector_template, {
+  { variation = 26, main_offset = util.by_pixel(0, -3), shadow_offset = util.by_pixel(2, -3), show_shadow = true },
+  { variation = 26, main_offset = util.by_pixel(0, 0), shadow_offset = util.by_pixel(2, 0), show_shadow = true },
+  { variation = 2, main_offset = util.by_pixel(0, 3), shadow_offset = util.by_pixel(2, 3), show_shadow = true },
+  { variation = 26, main_offset = util.by_pixel(0, 0), shadow_offset = util.by_pixel(2, 0), show_shadow = true },
+})
+
+local outtake_connector_def = circuit_connector_definitions.create(universal_connector_template, {
+  { variation = 2, main_offset = util.by_pixel(0, 3), shadow_offset = util.by_pixel(2, 3), show_shadow = true },
+  { variation = 26, main_offset = util.by_pixel(0, 0), shadow_offset = util.by_pixel(2, 0), show_shadow = true },
+  { variation = 26, main_offset = util.by_pixel(0, -3), shadow_offset = util.by_pixel(2, -3), show_shadow = true },
+  { variation = 26, main_offset = util.by_pixel(0, 0), shadow_offset = util.by_pixel(2, 0), show_shadow = true },
 })
 
 data:extend({
@@ -251,8 +258,8 @@ data:extend({
     },
     energy_usage = "180kW", -- base 30 x4
     pumping_speed = 1200,
-    circuit_wire_connection_points = connector_def.points,
-    circuit_connector_sprites = connector_def.sprites,
+    circuit_wire_connection_points = intake_connector_def.points,
+    circuit_connector_sprites = intake_connector_def.sprites,
     circuit_wire_max_distance = data.raw["storage-tank"]["storage-tank"].circuit_wire_max_distance,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
   },
@@ -501,8 +508,8 @@ data:extend({
     },
     energy_usage = "180kW", -- base 30 x4
     pumping_speed = 1200,
-    circuit_wire_connection_points = connector_def.points,
-    circuit_connector_sprites = connector_def.sprites,
+    circuit_wire_connection_points = outtake_connector_def.points,
+    circuit_connector_sprites = outtake_connector_def.sprites,
     circuit_wire_max_distance = data.raw["storage-tank"]["storage-tank"].circuit_wire_max_distance,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
   },

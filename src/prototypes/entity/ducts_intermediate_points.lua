@@ -1,26 +1,26 @@
 local connector_def = circuit_connector_definitions.create(universal_connector_template, {
   {
-    variation = 2,
-    main_offset = util.by_pixel(0, 4),
-    shadow_offset = util.by_pixel(-2, 2),
+    variation = 24,
+    main_offset = util.by_pixel(-22, 5),
+    shadow_offset = util.by_pixel(0, 0),
+    show_shadow = false,
+  },
+  {
+    variation = 26,
+    main_offset = util.by_pixel(22, 15),
+    shadow_offset = util.by_pixel(24, 15),
     show_shadow = true,
   },
   {
-    variation = 4,
-    main_offset = util.by_pixel(-27, -13),
-    shadow_offset = util.by_pixel(-25, -13),
-    show_shadow = true,
+    variation = 24,
+    main_offset = util.by_pixel(-22, 5),
+    shadow_offset = util.by_pixel(0, 0),
+    show_shadow = false,
   },
   {
-    variation = 2,
-    main_offset = util.by_pixel(0, -42),
-    shadow_offset = util.by_pixel(-2, -42),
-    show_shadow = true,
-  },
-  {
-    variation = 4,
-    main_offset = util.by_pixel(19, -13),
-    shadow_offset = util.by_pixel(21, -13),
+    variation = 26,
+    main_offset = util.by_pixel(22, 15),
+    shadow_offset = util.by_pixel(24, 15),
     show_shadow = true,
   },
 })

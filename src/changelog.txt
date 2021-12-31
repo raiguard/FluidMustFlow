@@ -3,6 +3,7 @@ Version: 1.3.0
 Date: ????
   Changes:
     - Connecing regular pipes directly to ducts is now entirely impossible, and the setting has been removed
+    - Improved circuit connector positioning
     - Placing regular or long duct ghosts will no longer replace them with small ducts - bots will place the larger ducts directly
     - Removed base area and health multiplier options
     - Rewrote duct auto-join logic to improve performance and reliability
