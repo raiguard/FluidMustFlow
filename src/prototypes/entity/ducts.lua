@@ -1091,7 +1091,7 @@ data:extend({
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.4, result = "duct-underground" },
     fast_replaceable_group = "ducts",
-    max_health = 200 * settings.startup["fmf-duct-health-multiplier"].value,
+    max_health = 800,
     corpse = "small-remnants",
     resistances = data.raw["pipe"]["pipe"].resistances,
     collision_box = { { -0.80, -0.95 }, { 0.63, 0.85 } },

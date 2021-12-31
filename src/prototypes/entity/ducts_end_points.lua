@@ -17,7 +17,7 @@ data:extend({
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.4, result = "duct-end-point-intake" },
-    max_health = 200 * settings.startup["fmf-duct-health-multiplier"].value,
+    max_health = 800,
     resistances = data.raw["pump"]["pump"].resistances,
     corpse = "small-remnants",
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
@@ -267,10 +267,9 @@ data:extend({
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.4, result = "duct-end-point-outtake" },
-    max_health = 200 * settings.startup["fmf-duct-health-multiplier"].value,
+    max_health = 800,
     resistances = data.raw["pump"]["pump"].resistances,
     corpse = "small-remnants",
-    -- boxes (collision, selection, fluid)
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     fluid_box = {
