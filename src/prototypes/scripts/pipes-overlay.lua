@@ -30,10 +30,10 @@ function _pipes_overlay.getDuctFixedPipeCoversPictures(direction)
 		duct_cover.north = sprites_builder.getEmptySprite()
 	elseif direction == defines.direction.north then
 		duct_cover.south = sprites_builder.getEmptySprite()
-	else 
+	else
 		duct_cover.east = sprites_builder.getEmptySprite()
 	end
-	
+
 	return duct_cover
 end
 --]]
