@@ -252,7 +252,7 @@ data:extend({
       drain = "1kW",
     },
     energy_usage = "180kW", -- base 30 x4
-    pumping_speed = 400, -- base 200 x6
+    pumping_speed = 1200,
     circuit_wire_connection_points = connector_def.points,
     circuit_connector_sprites = connector_def.sprites,
     circuit_wire_max_distance = data.raw["storage-tank"]["storage-tank"].circuit_wire_max_distance,
@@ -502,7 +502,7 @@ data:extend({
       drain = "1kW",
     },
     energy_usage = "180kW", -- base 30 x4
-    pumping_speed = 400, -- base 200 x6
+    pumping_speed = 1200,
     circuit_wire_connection_points = connector_def.points,
     circuit_connector_sprites = connector_def.sprites,
     circuit_wire_max_distance = data.raw["storage-tank"]["storage-tank"].circuit_wire_max_distance,

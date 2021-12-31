@@ -1,5 +1,5 @@
-BASE_AREA = 0.5
-HEIGHT = 48
+BASE_AREA = 1
+HEIGHT = 60
 
 require("prototypes.items")
 require("prototypes.entities")

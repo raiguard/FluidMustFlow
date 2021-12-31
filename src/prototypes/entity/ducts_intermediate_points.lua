@@ -241,7 +241,7 @@ data:extend({
     fluid_wagon_connector_frame_count = 0,
     energy_usage = "1W", -- base 30 x0
     energy_source = { type = "void" },
-    pumping_speed = 400, -- base 200 x2
+    pumping_speed = 1200,
     circuit_wire_connection_points = connector_def.points,
     circuit_connector_sprites = connector_def.sprites,
     circuit_wire_max_distance = data.raw["storage-tank"]["storage-tank"].circuit_wire_max_distance,
