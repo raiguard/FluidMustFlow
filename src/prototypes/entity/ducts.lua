@@ -1,10 +1,8 @@
-local entity_icons = "__FluidMustFlow__/graphics/icon/entities/"
-
 data:extend({
   {
     type = "storage-tank",
     name = "duct-small",
-    icon = entity_icons .. "duct-small.png",
+    icon = "__FluidMustFlow__/graphics/icon/entities/duct-small.png",
     icon_size = 64,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.8, result = "duct-small" },
@@ -197,7 +195,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "duct",
-    icon = entity_icons .. "duct.png",
+    icon = "__FluidMustFlow__/graphics/icon/entities/duct.png",
     icon_size = 64,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.8, result = "duct" },
@@ -374,7 +372,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "duct-long",
-    icon = entity_icons .. "duct-long.png",
+    icon = "__FluidMustFlow__/graphics/icon/entities/duct-long.png",
     icon_size = 64,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.8, result = "duct-long" },
@@ -551,7 +549,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "duct-t-junction",
-    icon = entity_icons .. "duct-t-junction.png",
+    icon = "__FluidMustFlow__/graphics/icon/entities/duct-t-junction.png",
     icon_size = 64,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.8, result = "duct-t-junction" },
@@ -729,7 +727,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "duct-curve",
-    icon = entity_icons .. "duct-curve.png",
+    icon = "__FluidMustFlow__/graphics/icon/entities/duct-curve.png",
     icon_size = 64,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.8, result = "duct-curve" },
@@ -906,7 +904,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "duct-cross",
-    icon = entity_icons .. "duct-cross.png",
+    icon = "__FluidMustFlow__/graphics/icon/entities/duct-cross.png",
     icon_size = 64,
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.8, result = "duct-cross" },
@@ -1086,7 +1084,7 @@ data:extend({
   {
     type = "pipe-to-ground",
     name = "duct-underground",
-    icon = entity_icons .. "duct-to-ground.png",
+    icon = "__FluidMustFlow__/graphics/icon/entities/duct-to-ground.png",
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.4, result = "duct-underground" },

@@ -1,5 +1,3 @@
-local fmf_icons_path = "__FluidMustFlow__/graphics/icon/entities/"
-
 local connector_def = circuit_connector_definitions.create(universal_connector_template, {
   { variation = 2, main_offset = util.by_pixel(0, 3), shadow_offset = util.by_pixel(-2, 3), show_shadow = true },
   { variation = 4, main_offset = util.by_pixel(-4, 18), shadow_offset = util.by_pixel(-2, 18), show_shadow = true },
@@ -13,7 +11,7 @@ data:extend({
     name = "duct-end-point-intake",
     fast_replace_group = "duct-end-points",
     next_upgrade = nil,
-    icon = fmf_icons_path .. "duct-end-point.png",
+    icon = "__FluidMustFlow__/graphics/icon/entities/duct-end-point.png",
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.4, result = "duct-end-point-intake" },
@@ -263,7 +261,7 @@ data:extend({
     name = "duct-end-point-outtake",
     fast_replace_group = "duct-end-points",
     next_upgrade = nil,
-    icon = fmf_icons_path .. "duct-end-point.png",
+    icon = "__FluidMustFlow__/graphics/icon/entities/duct-end-point.png",
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.4, result = "duct-end-point-outtake" },

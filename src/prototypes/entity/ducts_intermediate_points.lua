@@ -25,13 +25,11 @@ local connector_def = circuit_connector_definitions.create(universal_connector_t
   },
 })
 
-local fmf_icons_path = "__FluidMustFlow__/graphics/icon/entities/"
-
 data:extend({
   {
     type = "pump",
     name = "non-return-duct",
-    icon = fmf_icons_path .. "non-return-duct.png",
+    icon = "__FluidMustFlow__/graphics/icon/entities/non-return-duct.png",
     icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.4, result = "non-return-duct" },
