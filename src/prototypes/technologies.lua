@@ -33,7 +33,6 @@ local effects = {
   },
 }
 
--- TODO:
 if not settings.startup["fmf-enable-duct-auto-join"].value then
   table.insert(effects, {
     type = "unlock-recipe",
@@ -73,7 +72,7 @@ end
 data:extend({
   {
     type = "technology",
-    -- FIXME: WHY IS THIS CAPITALIZED!?!?!?!?!?!
+    -- WHY IS THIS CAPITALIZED!?!?!?!?!?!
     name = "Ducts",
     icon_size = 128,
     icon = "__FluidMustFlow__/graphics/icon/technologies/iron_duct_tecnology.png",
