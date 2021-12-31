@@ -344,7 +344,7 @@ function ductScriptBuiltEvents(event)
 end
 
 -- Add duct join and duct ghost control
-script.on_init(updateSettingVariables)
-script.on_configuration_changed(updateSettingVariables)
-script.on_event(build_events, ductControlEvents)
-script.on_event(script_build_events, ductScriptBuiltEvents)
+-- script.on_init(updateSettingVariables)
+-- script.on_configuration_changed(updateSettingVariables)
+-- script.on_event(build_events, ductControlEvents)
+-- script.on_event(script_build_events, ductScriptBuiltEvents)
