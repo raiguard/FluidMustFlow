@@ -2,8 +2,10 @@
 Version: 1.3.0
 Date: ????
   Changes:
+    - Connecing regular pipes directly to ducts is now entirely impossible, and the setting has been removed
+    - Placing regular or long duct ghosts will no longer replace them with small ducts - bots will place the larger ducts directly
+    - Rewrote duct auto-join logic to improve performance and reliability
     - Significantly increased duct throughput
-    - Placing duct ghosts will no longer replace them with small ducts - bots will place the larger ducts directly
   Bugfixes:
     - Fixed that ducts placed out of line with intakes and outtakes would still connect
 ---------------------------------------------------------------------------------------------------
