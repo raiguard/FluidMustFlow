@@ -384,7 +384,7 @@ data:extend({
     collision_box = { { -0.77, -1.95 }, { 0.77, 1.95 } },
     selection_box = { { -1.1, -2.2 }, { 1.1, 2.2 } },
     fluid_box = {
-      base_area = 2 * BASE_AREA,
+      base_area = BASE_AREA,
       height = HEIGHT,
       base_level = 0,
       pipe_covers = nil,
@@ -561,7 +561,7 @@ data:extend({
     collision_box = { { -0.8, -0.9 }, { 0.8, 0.7 } },
     selection_box = { { -1.1, -1.1 }, { 1.1, 1.1 } },
     fluid_box = {
-      base_area = 2 * BASE_AREA,
+      base_area = BASE_AREA / 2,
       height = HEIGHT,
       base_level = 0,
       pipe_covers = nil,
@@ -739,7 +739,7 @@ data:extend({
     collision_box = { { -0.9, -0.9 }, { 0.75, 0.75 } },
     selection_box = { { -1.1, -1.1 }, { 1.1, 1.1 } },
     fluid_box = {
-      base_area = 2 * BASE_AREA,
+      base_area = BASE_AREA / 4,
       height = HEIGHT,
       base_level = 0,
       pipe_covers = nil,
@@ -916,7 +916,7 @@ data:extend({
     collision_box = { { -0.85, -0.85 }, { 0.85, 0.85 } },
     selection_box = { { -1.1, -1.1 }, { 1.1, 1.1 } },
     fluid_box = {
-      base_area = 2 * BASE_AREA,
+      base_area = BASE_AREA,
       height = HEIGHT,
       base_level = 0,
       pipe_covers = nil,
@@ -1095,7 +1095,7 @@ data:extend({
     collision_box = { { -0.80, -0.95 }, { 0.63, 0.85 } },
     selection_box = { { -1.0, -1.2 }, { 1.1, 0.9 } },
     fluid_box = {
-      base_area = BASE_AREA,
+      base_area = BASE_AREA / 4,
       height = HEIGHT,
       base_level = 0,
       pipe_covers = nil,

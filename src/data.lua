@@ -1,4 +1,4 @@
-BASE_AREA = 1
+BASE_AREA = 4 / 5
 HEIGHT = 60
 
 require("prototypes.items")
