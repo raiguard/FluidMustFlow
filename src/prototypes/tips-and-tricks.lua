@@ -34,6 +34,7 @@ data:extend({
       entity = "duct-small",
       count = 2,
     },
+    dependencies = { "fmf-introduction" },
     simulation = simulations.auto_join,
   },
 })
