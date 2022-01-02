@@ -9,4 +9,124 @@ simulations.introduction = {
   ]],
 }
 
+simulations.auto_join = {
+  init = [[
+    global.player = game.create_test_player({ name = "foo" })
+    global.character = global.player.character
+    global.character.teleport({ 0, 3})
+
+    game.camera_player = global.player
+
+    step_0 = function()
+      game.camera_player_cursor_position = { 0, 3 }
+      game.camera_player_cursor_direction = defines.direction.east
+      target_cursor_position = { -4, -1 }
+      script.on_nth_tick(1, function()
+        local finished = game.move_cursor({ position = target_cursor_position })
+        if finished then
+          step_1()
+        end
+      end)
+    end
+
+    step_1 = function()
+      global.character.cursor_stack.set_stack{ name = "duct-small", count = 8 }
+      target_cursor_position = { 4, -1 }
+      script.on_nth_tick(1, function()
+        local finished = game.move_cursor({ position = target_cursor_position, speed = 0.1 })
+
+        if global.player.can_build_from_cursor({ position = game.camera_player_cursor_position }) then
+          global.player.build_from_cursor({ position = game.camera_player_cursor_position, direction = defines.direction.east })
+        end
+
+        if finished then
+          step_2()
+        end
+      end)
+    end
+
+    step_2 = function()
+      target_cursor_position = { 0, 3 }
+      script.on_nth_tick(1, function()
+        local finished = game.move_cursor({ position = target_cursor_position })
+        if finished then
+          finish()
+        end
+      end)
+    end
+
+    finish = function()
+      global.finished_tick = game.tick
+
+      script.on_nth_tick(1, function()
+        if game.tick == global.finished_tick + 90 then
+          for _, entity in pairs(game.surfaces[1].find_entities_filtered({ name = "duct-long" })) do
+            entity.destroy()
+          end
+          step_0()
+        end
+      end)
+    end
+
+    step_0()
+
+    -- Copy of control.lua
+
+    --- Calculates the midpoint between two positions.
+    --- @param pos_1 Position
+    --- @param pos_2 Position
+    --- @return Position
+    local function get_midpoint(pos_1, pos_2)
+      return {
+        x = (pos_1.x + pos_2.x) / 2,
+        y = (pos_1.y + pos_2.y) / 2,
+      }
+    end
+
+    --- @param e on_built_entity|on_robot_built_entity|script_raised_built|script_raised_revive
+    local function join_ducts(e)
+      --- @type LuaEntity
+      local entity = e.entity or e.created_entity
+      if not entity or not entity.valid then
+        return
+      end
+
+      -- Straight ducts only have one fluidbox
+      for _, neighbour in pairs(entity.neighbours[1]) do
+        if entity.name == neighbour.name then
+          local direction = entity.direction
+          local force = entity.force
+          local last_user = entity.last_user
+          local name = entity.name == "duct-small" and "duct" or "duct-long"
+          local position = get_midpoint(entity.position, neighbour.position)
+          local surface = entity.surface
+
+          entity.destroy({ raise_destroy = true })
+          neighbour.destroy({ raise_destroy = true })
+
+          surface.create_entity({
+            name = name,
+            position = position,
+            direction = direction,
+            force = force,
+            player = last_user,
+            raise_built = true,
+            create_build_effect_smoke = false,
+          })
+
+          -- Only do one join per build
+          break
+        end
+      end
+    end
+
+    local event_filter = { { filter = "name", name = "duct-small" }, { filter = "name", name = "duct" } }
+
+    script.on_event(defines.events.on_built_entity, join_ducts, event_filter)
+    script.on_event(defines.events.on_robot_built_entity, join_ducts, event_filter)
+    script.on_event(defines.events.script_raised_built, join_ducts, event_filter)
+    script.on_event(defines.events.script_raised_revive, join_ducts, event_filter)
+  ]],
+}
+
 return simulations

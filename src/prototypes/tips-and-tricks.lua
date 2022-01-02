@@ -14,4 +14,26 @@ data:extend({
     },
     simulation = simulations.introduction,
   },
+  {
+    type = "tips-and-tricks-item",
+    name = "fmf-auto-join",
+    category = "fluid-must-flow",
+    order = "b",
+    indent = 1,
+    trigger = {
+      type = "build-entity",
+      build_by_dragging = false,
+      entity = "duct-small",
+      count = 1,
+    },
+    skip_trigger = {
+      type = "build-entity",
+      build_in_line = true,
+      build_by_dragging = true,
+      consecutive = true,
+      entity = "duct-small",
+      count = 2,
+    },
+    simulation = simulations.auto_join,
+  },
 })
