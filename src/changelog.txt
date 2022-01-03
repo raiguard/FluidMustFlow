@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.0
 Date: ????
+  Features:
+    - Ducts can be connected to the circuit network to read their contents
   Changes:
     - Connecing regular pipes directly to ducts is now entirely impossible, and the setting has been removed
     - Improved circuit connector positioning
