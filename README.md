@@ -23,3 +23,15 @@ Due to their large size, ducts cannot be directly connected to regular pipes. Th
 Ducts may be controlled using the circuit network for advanced setups.
 
 ![](./screenshots/circuit-network.png)
+
+## Credits
+
+### Mod Dev Team
+
+- **Krastor** - Artist.
+
+- **Linver** - Original maintainer.
+
+- **iicyan** - Wrote the original code for the mod.
+
+- **raiguard** - Current maintainer and fixer-upper.
