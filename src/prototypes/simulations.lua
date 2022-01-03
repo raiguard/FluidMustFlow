@@ -151,4 +151,20 @@ simulations.endpoints = {
   ]],
 }
 
+simulations.non_return_duct = {
+  init = [[
+    -- game.camera_alt_info = true
+    game.surfaces[1].create_entities_from_blueprint_string({
+      string = "0eNrFlu2uoyAQhu+F33IiqLV6K5uTBnXqsqtg+DjZbuO9L9gT0w9Maf+siTEIPvM674xyRs1gYVJcGFSfEW+l0Kj+cUaa94IN/p45TYBqxA2MKEGCjX7U2dZgPbJhQHOCuOjgD6rJnMQ9CKLDk3QxsbTGsN9wBaHzZ4JAGG44XKQsg9NB2LEB5aKsLBigNYq3jgeqP2EHBHVkLbhwk9SOIIUX4qh4n6CTu1QuUGOPR1AHzf86CEnXw6u/i0XXWNo22rCFuAkvHVwA73820iqvPfsMMLMoJkk3mDTEzFcmF0cu3BSe+BTKA0k/iguZfhRL1i/rDxqM4aLXfuE3awKj5AB2xD3TngWqdYFZD4sLzld3hxmr3Jg66ig7/xgzeACmDZoDSotVqReIjcS9klZ0AanVrdKOK2f3Mr8LgHfx4GITTAPgcqt23elL95Gff9Ofs/e37EGKPuRZNK9aeUIKrMB5I7BHP1JpNNSX4rVKg39Z0YbLNvzqeYhKnn0THuC7eMn0jYYg/6UhSPZGR5CYjiD5Gy1BYlqCFKEfwVYxpPfIYDnE92/5WhbKaPB9KTzLwj62yAi5BodQ1W1CW6u+YCuh5Lk0mr7ZXDFs8rJTaYxRlL5uVBrjE81e9slz/T5k2bvUV3ukBH2B0pdQe5KXFS3zqsjLIpvnf1ZWDVM=",
+      position = { -1, -3 },
+    })
+
+    for _, duct in pairs(game.surfaces[1].find_entities_filtered({ name = { "duct-small", "duct", "duct-long", "duct-t-junction" } })) do
+      local fluidbox = duct.fluidbox
+      local capacity = fluidbox.get_capacity(1)
+      fluidbox[1] = { name = "petroleum-gas", amount = capacity * 0.8 }
+    end
+  ]],
+}
+
 return simulations

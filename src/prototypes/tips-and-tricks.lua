@@ -56,4 +56,23 @@ data:extend({
     dependencies = { "fmf-introduction" },
     simulation = simulations.endpoints,
   },
+  {
+    type = "tips-and-tricks-item",
+    name = "fmf-non-return-duct",
+    category = "fluid-must-flow",
+    order = "d",
+    indent = 1,
+    trigger = {
+      type = "build-entity",
+      entity = "non-return-duct",
+      count = 1,
+    },
+    skip_trigger = {
+      type = "build-entity",
+      entity = "duct-end-point-intake",
+      count = 5,
+    },
+    dependencies = { "fmf-introduction" },
+    simulation = simulations.non_return_duct,
+  },
 })
