@@ -2,10 +2,10 @@ local simulations = {}
 
 simulations.introduction = {
   init = [[
-    game.surfaces[1].create_entities_from_blueprint_string{
+    game.surfaces[1].create_entities_from_blueprint_string({
       string = "0eNq9l9uSojAQht8l12SKhJP6KltTFmLLZBcDFRJrXYt33+ABT83YeDHeYIB86b+70x0ObFU5aIzSli0OTBW1btni14G1qtR51d+z+wbYgikLWxYwnW/70doVlju9BlOa2l9ZFzDlh3/ZQnQBbXq7zavqZqLsPgMG2iqr4GTEcbBfarddgfHkYX7rVq3Nraq1ZzZ1q45//Woew9OA7f0l82QNqvxa1c70vOizt+yBKQcmVFBYowoO2qvac+8SMJu8AGSJ+LrEWhk/7/jML7xymw2YZav+eaQIhx+yckRTI0fUCExNPDAb1QC3NT+H54kbfSQncPqRdAgpGUhKb5T2j3iP/AaU4aCUbBKfXVCe+eBZBJxRLeTze+7l9WUL1ipdtv17Z9QX5Ls9r1XVY8AUfs28hGPq+QT2d3LrjB9LT9zW635KbnkFeWsZpn72hnpJUT+frl7+uHoRXuW7bTO+kZ4kS4wmiLSIRJP00CSjoUHJ0Rtkms3xfQUFveZN7QtVX6zyPzBePiICPLmHF87sEGKIArEUFen0avTkhhgDZy8SYcBJNCtnY16snR1xYx9TDwwJqufjTRLhCipXhlO4MYbFoi7FHXY0gygoifX3sQQSeLuQ0T3E8t9OF3hvDM+WYZh4grckOQbJ5MyJv7ExfZHG54NMSCkNMiNvtuyyO0JKo5H0FibCUTJqMrmHCXELxs5SIbkdiktxGEnASEyusedNLF9LjuSUTTzHsFiMomh6baBY+7CJqlqXmHwy77p9dK25AX+a0BwvO5IMTekF46Icw2QTXJiSAzOj5+Ulx18fUgvj1vD2Mc1/ZB0/xhY3n34B24FpTz6eiTibyyyeJ3GWRF33H+iKo/I=",
       position = {-2, -1},
-    }
+    })
   ]],
 }
 
@@ -126,6 +126,25 @@ simulations.auto_join = {
     script.on_event(defines.events.on_robot_built_entity, join_ducts, event_filter)
     script.on_event(defines.events.script_raised_built, join_ducts, event_filter)
     script.on_event(defines.events.script_raised_revive, join_ducts, event_filter)
+  ]],
+}
+
+simulations.endpoints = {
+  init = [[
+    game.camera_alt_info = true
+    game.surfaces[1].create_entities_from_blueprint_string({
+      string = "0eNq9lsFymzAQht9FZ8ggEMH2oS/SyTACFqIpSIwk0roe3r0rnBK7Fo3sQ7gwQsu3C79+aU+k6icYtZCWHE5E1Eoacvh+IkZ0kvfumT2OQA5EWBhIRCQf3KiZahubgfc9mSMiZAO/yIHOLxEBaYUVcKYsg2Mpp6ECjQHr+9BDbbWoY5Cgu2OM+UG3vAZMMSqDBCVdcqTGu4gc8UYTzFRNbQu6NOI3UmiyXnN0kyxdk5mpMpYvyE36DuESRPdaqUm74rMXDzMLYtJkg5n6mGxlCtkKiVPxKEbPj6DpU34G50/57CHlK8kBYqviTqtJNv9DMT/qObQolOUvKkNUtMaXBqwVsjMu8J31k6PKjgG6xoS8g2VN4MrCJ9xO2o2RNqjGhXMb98CNJb4Ki+CPjffXFTZC4+Jb5p894F04ON8Epx7w/grswbFLnAfg1tWF/zyE7P39z4uh9NrLvZLdLTAJ56UhPBbOy655KABuFBtCFF6sT1zKHvAI/Vdd5iPnn8j7wUs25H3AdMmXeo4+YLokxHN0F+qNrX+3v9+1SYhp02vP4XnVxKPC48odWfwHbJqQBrDv8GAI7g4LhuDudyD9XOmU3UF1m1RgsfmWTGqyfp2oX6eIYA9kterLCl75m1DaxddC15OwJc41K6QV2tjyplNq+0k0H63S2YDzwsWWwTVarEgSNx5GjhZ0Gcg3NJxrn5Y263DRlUXkDbQ517ajrNinBdvnrMizef4DWc0xtg==",
+      position = { 0, -4 },
+    })
+
+    for _, duct in pairs(game.surfaces[1].find_entities_filtered({
+      area = { left_top = { x = -7, y = 0 }, right_bottom = { x = 7, y = 4 } },
+      name = "duct-long",
+    })) do
+      local fluidbox = duct.fluidbox
+      local capacity = fluidbox.get_capacity(1)
+      fluidbox[1] = { name = "water", amount = capacity * 0.5 }
+    end
   ]],
 }
 
