@@ -4,7 +4,7 @@ simulations.introduction = {
   init = [[
     game.surfaces[1].create_entities_from_blueprint_string({
       string = "0eNq9l9uSojAQht8l12SKhJP6KltTFmLLZBcDFRJrXYt33+ABT83YeDHeYIB86b+70x0ObFU5aIzSli0OTBW1btni14G1qtR51d+z+wbYgikLWxYwnW/70doVlju9BlOa2l9ZFzDlh3/ZQnQBbXq7zavqZqLsPgMG2iqr4GTEcbBfarddgfHkYX7rVq3Nraq1ZzZ1q45//Woew9OA7f0l82QNqvxa1c70vOizt+yBKQcmVFBYowoO2qvac+8SMJu8AGSJ+LrEWhk/7/jML7xymw2YZav+eaQIhx+yckRTI0fUCExNPDAb1QC3NT+H54kbfSQncPqRdAgpGUhKb5T2j3iP/AaU4aCUbBKfXVCe+eBZBJxRLeTze+7l9WUL1ipdtv17Z9QX5Ls9r1XVY8AUfs28hGPq+QT2d3LrjB9LT9zW635KbnkFeWsZpn72hnpJUT+frl7+uHoRXuW7bTO+kZ4kS4wmiLSIRJP00CSjoUHJ0Rtkms3xfQUFveZN7QtVX6zyPzBePiICPLmHF87sEGKIArEUFen0avTkhhgDZy8SYcBJNCtnY16snR1xYx9TDwwJqufjTRLhCipXhlO4MYbFoi7FHXY0gygoifX3sQQSeLuQ0T3E8t9OF3hvDM+WYZh4grckOQbJ5MyJv7ExfZHG54NMSCkNMiNvtuyyO0JKo5H0FibCUTJqMrmHCXELxs5SIbkdiktxGEnASEyusedNLF9LjuSUTTzHsFiMomh6baBY+7CJqlqXmHwy77p9dK25AX+a0BwvO5IMTekF46Icw2QTXJiSAzOj5+Ulx18fUgvj1vD2Mc1/ZB0/xhY3n34B24FpTz6eiTibyyyeJ3GWRF33H+iKo/I=",
-      position = {-2, -1},
+      position = { -2, -1 },
     })
   ]],
 }
@@ -13,14 +13,14 @@ simulations.auto_join = {
   init = [[
     global.player = game.create_test_player({ name = "foo" })
     global.character = global.player.character
-    global.character.teleport({ 0, 3})
+    global.character.teleport({ 0, 3 })
 
     game.camera_player = global.player
 
     step_0 = function()
       game.camera_player_cursor_position = { 0, 3 }
       game.camera_player_cursor_direction = defines.direction.east
-      target_cursor_position = { -4, -1 }
+      target_cursor_position = { -5, -1 }
       script.on_nth_tick(1, function()
         local finished = game.move_cursor({ position = target_cursor_position })
         if finished then
@@ -30,13 +30,16 @@ simulations.auto_join = {
     end
 
     step_1 = function()
-      global.character.cursor_stack.set_stack{ name = "duct-small", count = 8 }
-      target_cursor_position = { 4, -1 }
+      global.character.cursor_stack.set_stack({ name = "duct-small", count = 10 })
+      target_cursor_position = { 5, -1 }
       script.on_nth_tick(1, function()
         local finished = game.move_cursor({ position = target_cursor_position, speed = 0.1 })
 
         if global.player.can_build_from_cursor({ position = game.camera_player_cursor_position }) then
-          global.player.build_from_cursor({ position = game.camera_player_cursor_position, direction = defines.direction.east })
+          global.player.build_from_cursor({
+            position = game.camera_player_cursor_position,
+            direction = defines.direction.east,
+          })
         end
 
         if finished then
@@ -60,7 +63,7 @@ simulations.auto_join = {
 
       script.on_nth_tick(1, function()
         if game.tick == global.finished_tick + 90 then
-          for _, entity in pairs(game.surfaces[1].find_entities_filtered({ name = "duct-long" })) do
+          for _, entity in pairs(game.surfaces[1].find_entities_filtered({ name = { "duct", "duct-long" } })) do
             entity.destroy()
           end
           step_0()
