@@ -26,8 +26,6 @@ Ducts may be controlled using the circuit network for advanced setups.
 
 ## Credits
 
-### Mod Dev Team
-
 - **Krastor** - Artist.
 
 - **Linver** - Original maintainer.
