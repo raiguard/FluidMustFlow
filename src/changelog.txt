@@ -91,12 +91,12 @@ Date: 2020-2-2
     - Improved checking of connection conditions.
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.3
-Date:020- 1-222
+Date: 2020-1-22
   Bugfixes:
     - Modified info file to start with 0.18
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.2
-Date: -20-205-
+Date: 2020-1-5
   Bugfixes:
     - Fixed crash bug when attempt to check valid property of entities
 ---------------------------------------------------------------------------------------------------
