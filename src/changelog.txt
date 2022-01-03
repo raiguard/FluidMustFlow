@@ -2,6 +2,7 @@
 Version: 1.3.0
 Date: ????
   Features:
+    - Added tips and tricks with simulations
     - Ducts can be connected to the circuit network to read their contents
   Changes:
     - Connecing regular pipes directly to ducts is now entirely impossible, and the setting has been removed
@@ -9,9 +10,9 @@ Date: ????
     - Placing regular or long duct ghosts will no longer replace them with small ducts - bots will place the larger ducts directly
     - Removed base area and health multiplier options
     - Rewrote duct auto-join logic to improve performance and reliability
-    - Significantly increased duct throughput - transfer rate can now reach 72,000 fluid/sec
+    - Significantly increased duct throughput - transfer rate can now reliably reach 72,000 fluid/sec
   Bugfixes:
-    - Fixed that ducts placed out of line with intakes and outtakes would still connect
+    - Fixed that ducts placed out of line with intakes and exhausts would still connect
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.16
 Date: 2020-12-25
