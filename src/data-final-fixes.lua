@@ -1,1 +1,1 @@
-require("compatibility-scripts/data-final-fixes/IndustrialRevolution")
+require("prototypes.compatibility.IndustrialRevolution")
