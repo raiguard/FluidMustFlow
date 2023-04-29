@@ -1,0 +1,9 @@
+api_token_env: CROWDIN_TOKEN
+project_id_env: CROWDIN_FACTORIO_MODS_ID
+preserve_hierarchy: true
+
+files:
+  - source: /locale/en/FluidMustFlow.cfg
+    dest: FluidMustFlow/FluidMustFlow.ini
+    translation: /locale/%two_letters_code%/%original_file_name%
+    type: ini
