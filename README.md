@@ -1,10 +1,14 @@
+[![shield](https://img.shields.io/badge/Ko--fi-Donate%20-hotpink?logo=kofi&logoColor=white)](https://ko-fi.com/raiguard)
+[![shield](https://img.shields.io/badge/Crowdin-Translate-brightgreen)](https://crowdin.com/project/raiguards-factorio-mods)
+[![shield](https://img.shields.io/badge/dynamic/json?color=orange&label=Factorio&query=downloads_count&suffix=%20downloads&url=https%3A%2F%2Fmods.factorio.com%2Fapi%2Fmods%2FFluidMustFlow)](https://mods.factorio.com/mod/FluidMustFlow)
+
 # Fluid Must Flow
 
-A mod for Factorio that adds enormous ducts for transporting large volumes of liquids and gases.
+Adds very large pipes with enormous throughput capabilities to Factorio.
 
 ## Installation
 
-Download from the [Factorio mod portal](https://mods.factorio.com/mod/FluidMustFlow) from the in-game browser.
+[Download on the mod portal.](https://mods.factorio.com/mod/FluidMustFlow)
 
 ## Features
 
