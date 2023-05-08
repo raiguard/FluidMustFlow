@@ -47,8 +47,8 @@ data:extend({
       base_level = 0,
       pipe_covers = nil,
       pipe_connections = {
-        { position = { -0, -1.1 }, max_underground_distance = 1 },
-        { position = { 0, 1.1 }, max_underground_distance = 1 },
+        { position = { -0, -1.1 } },
+        { position = { 0, 1.1 } },
       },
       hide_connection_info = true,
     },
@@ -244,8 +244,8 @@ data:extend({
       base_level = 0,
       pipe_covers = nil,
       pipe_connections = {
-        { position = { 0, -1.6 }, max_underground_distance = 1 },
-        { position = { 0, 1.6 }, max_underground_distance = 1 },
+        { position = { 0, -1.6 } },
+        { position = { 0, 1.6 } },
       },
       hide_connection_info = true,
     },
@@ -425,8 +425,8 @@ data:extend({
       base_level = 0,
       pipe_covers = nil,
       pipe_connections = {
-        { position = { 0, -2.6 }, max_underground_distance = 1 },
-        { position = { 0, 2.6 }, max_underground_distance = 1 },
+        { position = { 0, -2.6 } },
+        { position = { 0, 2.6 } },
       },
       hide_connection_info = true,
     },
@@ -606,9 +606,9 @@ data:extend({
       base_level = 0,
       pipe_covers = nil,
       pipe_connections = {
-        { position = { 0, -1.6 }, max_underground_distance = 1 },
-        { position = { 1.6, 0 }, max_underground_distance = 1 },
-        { position = { -1.6, 0 }, max_underground_distance = 1 },
+        { position = { 0, -1.6 } },
+        { position = { 1.6, 0 } },
+        { position = { -1.6, 0 } },
       },
       hide_connection_info = true,
     },
@@ -788,8 +788,8 @@ data:extend({
       base_level = 0,
       pipe_covers = nil,
       pipe_connections = {
-        { position = { 0, -1.6 }, max_underground_distance = 1 },
-        { position = { -1.6, 0 }, max_underground_distance = 1 },
+        { position = { 0, -1.6 } },
+        { position = { -1.6, 0 } },
       },
       hide_connection_info = true,
     },
@@ -969,10 +969,10 @@ data:extend({
       base_level = 0,
       pipe_covers = nil,
       pipe_connections = {
-        { position = { 0, -1.6 }, max_underground_distance = 1 },
-        { position = { 0, 1.6 }, max_underground_distance = 1 },
-        { position = { 1.6, 0 }, max_underground_distance = 1 },
-        { position = { -1.6, 0 }, max_underground_distance = 1 },
+        { position = { 0, -1.6 } },
+        { position = { 0, 1.6 } },
+        { position = { 1.6, 0 } },
+        { position = { -1.6, 0 } },
       },
       hide_connection_info = true,
     },
@@ -1151,7 +1151,7 @@ data:extend({
       base_level = 0,
       pipe_covers = nil,
       pipe_connections = {
-        { position = { 0, -1.6 }, max_underground_distance = 1 },
+        { position = { 0, -1.6 } },
         {
           position = { 0, 0.9 },
           max_underground_distance = settings.startup["fmf-underground-duct-max-length"].value + 3, -- we shifted the positioning a bit so as not to collide with the 1 underground distance we use for 'regular' connections
