@@ -789,7 +789,7 @@ data:extend({
           direction = defines.direction.south,
           connection_category_bitmask = 2,
           position = { 0, 0.5 },
-          max_underground_distance = settings.startup["fmf-underground-duct-max-length"].value + 3, -- we shifted the positioning a bit so as not to collide with the 1 underground distance we use for 'regular' connections
+          max_underground_distance = settings.startup["fmf-underground-duct-max-length"].value,
         },
       },
     },
