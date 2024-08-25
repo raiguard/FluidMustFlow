@@ -1,5 +1,4 @@
-BASE_AREA = 4 / 5
-HEIGHT = 60
+VOLUME = 4800
 
 require("prototypes.entities")
 require("prototypes.items")

@@ -1,4 +1,4 @@
-local connector_def = circuit_connector_definitions.create(universal_connector_template, {
+local connector_def = circuit_connector_definitions.create_vector(universal_connector_template, {
   {
     variation = 24,
     main_offset = util.by_pixel(-22, 5),
@@ -40,10 +40,20 @@ data:extend({
     resistances = data.raw["pump"]["pump"].resistances,
     collision_box = { { -0.77, -0.9 }, { 0.77, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
-    fluid_box = {
-      base_area = BASE_AREA / 4,
-      base_level = 0,
-      height = HEIGHT,
+    input_fluid_box = {
+      volume = VOLUME / 4,
+      pipe_covers = nil,
+      pipe_connections = {
+        {
+          direction = defines.direction.south,
+          connection_category_bitmask = 2,
+          position = { 0, 0.5 },
+          flow_direction = "input",
+        },
+      },
+    },
+    output_fluid_box = {
+      volume = VOLUME / 4,
       pipe_covers = nil,
       pipe_connections = {
         {
@@ -51,12 +61,6 @@ data:extend({
           connection_category_bitmask = 2,
           position = { 0, -0.5 },
           flow_direction = "output",
-        },
-        {
-          direction = defines.direction.south,
-          connection_category_bitmask = 2,
-          position = { 0, 0.5 },
-          flow_direction = "input",
         },
       },
     },

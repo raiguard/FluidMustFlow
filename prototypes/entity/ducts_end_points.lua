@@ -1,11 +1,11 @@
-local intake_connector_def = circuit_connector_definitions.create(universal_connector_template, {
+local intake_connector_def = circuit_connector_definitions.create_vector(universal_connector_template, {
   { variation = 26, main_offset = util.by_pixel(0, -3), shadow_offset = util.by_pixel(2, -3), show_shadow = true },
   { variation = 26, main_offset = util.by_pixel(0, 0), shadow_offset = util.by_pixel(2, 0), show_shadow = true },
   { variation = 2, main_offset = util.by_pixel(0, 3), shadow_offset = util.by_pixel(2, 3), show_shadow = true },
   { variation = 26, main_offset = util.by_pixel(0, 0), shadow_offset = util.by_pixel(2, 0), show_shadow = true },
 })
 
-local outtake_connector_def = circuit_connector_definitions.create(universal_connector_template, {
+local outtake_connector_def = circuit_connector_definitions.create_vector(universal_connector_template, {
   { variation = 2, main_offset = util.by_pixel(0, 3), shadow_offset = util.by_pixel(2, 3), show_shadow = true },
   { variation = 26, main_offset = util.by_pixel(0, 0), shadow_offset = util.by_pixel(2, 0), show_shadow = true },
   { variation = 26, main_offset = util.by_pixel(0, -3), shadow_offset = util.by_pixel(2, -3), show_shadow = true },
@@ -27,10 +27,8 @@ data:extend({
     corpse = "small-remnants",
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
-    fluid_box = {
-      base_area = BASE_AREA / 4,
-      height = HEIGHT,
-      base_level = 0,
+    input_fluid_box = {
+      volume = VOLUME / 4,
       pipe_covers = pipecoverspictures(),
       pipe_picture = {
         north = util.empty_sprite(),
@@ -59,12 +57,6 @@ data:extend({
           connection_category_bitmask = 1,
         },
         {
-          direction = defines.direction.north,
-          position = { 0, -0.5 },
-          flow_direction = "output",
-          connection_category_bitmask = 2,
-        },
-        {
           direction = defines.direction.east,
           position = { 0.5, -0.5 },
           flow_direction = "input",
@@ -87,6 +79,32 @@ data:extend({
           position = { -0.5, 0.5 },
           flow_direction = "input",
           connection_category_bitmask = 1,
+        },
+      },
+      secondary_draw_orders = { north = -1 },
+    },
+    output_fluid_box = {
+      volume = VOLUME / 4,
+      pipe_covers = pipecoverspictures(),
+      pipe_picture = {
+        north = util.empty_sprite(),
+        east = util.empty_sprite(),
+        south = {
+          filename = "__FluidMustFlow__/graphics/entity/other/hr_pipe-straight-vertical.png",
+          priority = "extra-high",
+          width = 45,
+          height = 40,
+          scale = 0.5,
+          shift = { 0, 0.5 },
+        },
+        west = util.empty_sprite(),
+      },
+      pipe_connections = {
+        {
+          direction = defines.direction.north,
+          position = { 0, -0.5 },
+          flow_direction = "output",
+          connection_category_bitmask = 2,
         },
       },
       secondary_draw_orders = { north = -1 },
@@ -220,10 +238,34 @@ data:extend({
     corpse = "small-remnants",
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
-    fluid_box = {
-      base_area = BASE_AREA / 4,
-      height = HEIGHT,
-      base_level = 0,
+    input_fluid_box = {
+      volume = VOLUME / 4,
+      pipe_covers = pipecoverspictures(),
+      pipe_picture = {
+        north = util.empty_sprite(),
+        east = util.empty_sprite(),
+        south = {
+          filename = "__FluidMustFlow__/graphics/entity/other/hr_pipe-straight-vertical.png",
+          priority = "extra-high",
+          width = 45,
+          height = 40,
+          scale = 0.5,
+          shift = { 0, 0.5 },
+        },
+        west = util.empty_sprite(),
+      },
+      pipe_connections = {
+        {
+          direction = defines.direction.south,
+          position = { 0, 0.5 },
+          flow_direction = "input",
+          connection_category_bitmask = 2,
+        },
+      },
+      secondary_draw_orders = { north = -1 },
+    },
+    output_fluid_box = {
+      volume = VOLUME / 4,
       pipe_covers = pipecoverspictures(),
       pipe_picture = {
         north = util.empty_sprite(),
@@ -250,12 +292,6 @@ data:extend({
           position = { -0.5, -0.5 },
           flow_direction = "output",
           connection_category_bitmask = 1,
-        },
-        {
-          direction = defines.direction.south,
-          position = { 0, 0.5 },
-          flow_direction = "input",
-          connection_category_bitmask = 2,
         },
         {
           direction = defines.direction.east,
