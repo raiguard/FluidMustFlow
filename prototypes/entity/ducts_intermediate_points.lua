@@ -30,7 +30,6 @@ data:extend({
     type = "pump",
     name = "non-return-duct",
     icon = "__FluidMustFlow__/graphics/icon/entities/non-return-duct.png",
-    icon_size = 64,
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.4, result = "non-return-duct" },
     fast_replaceable_group = "duct-intermediate-points",
