@@ -39,19 +39,7 @@ data:extend({
     resistances = data.raw["pump"]["pump"].resistances,
     collision_box = { { -0.77, -0.9 }, { 0.77, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
-    input_fluid_box = {
-      volume = VOLUME / 4,
-      pipe_covers = nil,
-      pipe_connections = {
-        {
-          direction = defines.direction.south,
-          connection_category_bitmask = 2,
-          position = { 0, 0.5 },
-          flow_direction = "input",
-        },
-      },
-    },
-    output_fluid_box = {
+    fluid_box = {
       volume = VOLUME / 4,
       pipe_covers = nil,
       pipe_connections = {
@@ -60,6 +48,12 @@ data:extend({
           connection_category_bitmask = 2,
           position = { 0, -0.5 },
           flow_direction = "output",
+        },
+        {
+          direction = defines.direction.south,
+          connection_category_bitmask = 2,
+          position = { 0, 0.5 },
+          flow_direction = "input",
         },
       },
     },
