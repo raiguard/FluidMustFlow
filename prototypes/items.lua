@@ -1,4 +1,4 @@
-local icons_path = "__FluidMustFlow__/graphics/icon/entities/"
+local icons_path = "__FluidMustFlow__/graphics/icons/entities/"
 
 data:extend({
   {

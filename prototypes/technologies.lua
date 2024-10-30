@@ -75,7 +75,7 @@ data:extend({
     -- WHY IS THIS CAPITALIZED!?!?!?!?!?!
     name = "Ducts",
     icon_size = 128,
-    icon = "__FluidMustFlow__/graphics/icon/technologies/iron_duct_tecnology.png",
+    icon = "__FluidMustFlow__/graphics/icons/technologies/iron-duct-tecnology.png",
     upgrade = false,
     effects = effects,
     prerequisites = prerequisites,

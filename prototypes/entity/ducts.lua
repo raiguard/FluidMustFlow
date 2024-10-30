@@ -32,7 +32,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "duct-small",
-    icon = "__FluidMustFlow__/graphics/icon/entities/duct-small.png",
+    icon = "__FluidMustFlow__/graphics/icons/entities/duct-small.png",
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.8, result = "duct-small" },
     fast_replaceable_group = "ducts",
@@ -59,7 +59,7 @@ data:extend({
         north = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_small/duct_small_straight_vertical.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-small/duct-small-straight-vertical.png",
               height = 160,
               priority = "high",
               scale = 0.5,
@@ -67,7 +67,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_small/duct_small_straight_vertical_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-small/duct-small-straight-vertical-shadow.png",
               height = 160,
               priority = "high",
               scale = 0.5,
@@ -78,7 +78,7 @@ data:extend({
         east = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_small/duct_small_straight_horizontal.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-small/duct-small-straight-horizontal.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -86,7 +86,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_small/duct_small_straight_horizontal_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-small/duct-small-straight-horizontal-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -101,7 +101,7 @@ data:extend({
         south = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_small/duct_small_straight_vertical.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-small/duct-small-straight-vertical.png",
               height = 160,
               priority = "high",
               scale = 0.5,
@@ -109,7 +109,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_small/duct_small_straight_vertical_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-small/duct-small-straight-vertical-shadow.png",
               height = 160,
               priority = "high",
               scale = 0.5,
@@ -120,7 +120,7 @@ data:extend({
         west = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_small/duct_small_straight_horizontal.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-small/duct-small-straight-horizontal.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -128,7 +128,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_small/duct_small_straight_horizontal_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-small/duct-small-straight-horizontal-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -159,7 +159,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "duct",
-    icon = "__FluidMustFlow__/graphics/icon/entities/duct.png",
+    icon = "__FluidMustFlow__/graphics/icons/entities/duct.png",
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.8, result = "duct" },
     fast_replaceable_group = "ducts",
@@ -186,7 +186,7 @@ data:extend({
         north = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct/duct_horizontal.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct/duct-horizontal.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -194,7 +194,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct/duct_horizontal_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct/duct-horizontal-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -205,7 +205,7 @@ data:extend({
         east = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct/duct_vertical.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct/duct-vertical.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -213,7 +213,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct/duct_vertical_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct/duct-vertical-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -224,7 +224,7 @@ data:extend({
         south = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct/duct_horizontal.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct/duct-horizontal.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -232,7 +232,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct/duct_horizontal_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct/duct-horizontal-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -243,7 +243,7 @@ data:extend({
         west = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct/duct_vertical.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct/duct-vertical.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -251,7 +251,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct/duct_vertical_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct/duct-vertical-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -278,7 +278,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "duct-long",
-    icon = "__FluidMustFlow__/graphics/icon/entities/duct-long.png",
+    icon = "__FluidMustFlow__/graphics/icons/entities/duct-long.png",
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.8, result = "duct-long" },
     fast_replaceable_group = "ducts",
@@ -304,7 +304,7 @@ data:extend({
         north = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_long/duct_long_horizontal.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-long/duct-long-horizontal.png",
               height = 360,
               priority = "high",
               scale = 0.5,
@@ -312,7 +312,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_long/duct_long_horizontal_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-long/duct-long-horizontal-shadow.png",
               height = 360,
               priority = "high",
               scale = 0.5,
@@ -323,7 +323,7 @@ data:extend({
         east = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_long/duct_long_vertical.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-long/duct-long-vertical.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -331,7 +331,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_long/duct_long_vertical_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-long/duct-long-vertical-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -342,7 +342,7 @@ data:extend({
         south = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_long/duct_long_horizontal.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-long/duct-long-horizontal.png",
               height = 360,
               priority = "high",
               scale = 0.5,
@@ -350,7 +350,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_long/duct_long_horizontal_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-long/duct-long-horizontal-shadow.png",
               height = 360,
               priority = "high",
               scale = 0.5,
@@ -361,7 +361,7 @@ data:extend({
         west = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_long/duct_long_vertical.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-long/duct-long-vertical.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -369,7 +369,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_long/duct_long_vertical_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-long/duct-long-vertical-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -396,7 +396,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "duct-t-junction",
-    icon = "__FluidMustFlow__/graphics/icon/entities/duct-t-junction.png",
+    icon = "__FluidMustFlow__/graphics/icons/entities/duct-t-junction.png",
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.8, result = "duct-t-junction" },
     fast_replaceable_group = "ducts",
@@ -424,7 +424,7 @@ data:extend({
         north = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_T/duct_T_up.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-t-junction/duct-t-junction-up.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -432,7 +432,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_T/duct_T_up_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-t-junction/duct-t-junction-up-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -443,7 +443,7 @@ data:extend({
         east = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_T/duct_T_right.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-t-junction/duct-t-junction-right.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -451,7 +451,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_T/duct_T_right_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-t-junction/duct-t-junction-right-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -462,7 +462,7 @@ data:extend({
         south = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_T/duct_T_down.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-t-junction/duct-t-junction-down.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -470,7 +470,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_T/duct_T_down_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-t-junction/duct-t-junction-down-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -481,7 +481,7 @@ data:extend({
         west = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_T/duct_T_left.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-t-junction/duct-t-junction-left.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -489,7 +489,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_T/duct_T_left_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-t-junction/duct-t-junction-left-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -516,7 +516,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "duct-curve",
-    icon = "__FluidMustFlow__/graphics/icon/entities/duct-curve.png",
+    icon = "__FluidMustFlow__/graphics/icons/entities/duct-curve.png",
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.8, result = "duct-curve" },
     fast_replaceable_group = "ducts",
@@ -543,7 +543,7 @@ data:extend({
         north = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_corner/duct_corner_up_left.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-corner/duct-corner-up-left.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -551,7 +551,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_corner/duct_corner_up_left_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-corner/duct-corner-up-left-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -562,7 +562,7 @@ data:extend({
         east = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_corner/duct_corner_up_right.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-corner/duct-corner-up-right.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -570,7 +570,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_corner/duct_corner_up_right_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-corner/duct-corner-up-right-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -581,7 +581,7 @@ data:extend({
         south = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_corner/duct_corner_down_right.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-corner/duct-corner-down-right.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -589,7 +589,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_corner/duct_corner_down_right_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-corner/duct-corner-down-right-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -600,7 +600,7 @@ data:extend({
         west = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_corner/duct_corner_down_left.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-corner/duct-corner-down-left.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -608,7 +608,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_corner/duct_corner_down_left_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-corner/duct-corner-down-left-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -635,7 +635,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "duct-cross",
-    icon = "__FluidMustFlow__/graphics/icon/entities/duct-cross.png",
+    icon = "__FluidMustFlow__/graphics/icons/entities/duct-cross.png",
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.8, result = "duct-cross" },
     fast_replaceable_group = "ducts",
@@ -664,7 +664,7 @@ data:extend({
         north = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_cross/duct_cross.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-cross/duct-cross.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -672,7 +672,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_cross/duct_cross_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-cross/duct-cross-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -683,7 +683,7 @@ data:extend({
         east = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_cross/duct_cross.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-cross/duct-cross.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -691,7 +691,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_cross/duct_cross_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-cross/duct-cross-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -702,7 +702,7 @@ data:extend({
         south = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_cross/duct_cross.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-cross/duct-cross.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -710,7 +710,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_cross/duct_cross_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-cross/duct-cross-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -721,7 +721,7 @@ data:extend({
         west = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_cross/duct_cross.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-cross/duct-cross.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -729,7 +729,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entity/duct/duct_cross/duct_cross_shadow.png",
+              filename = "__FluidMustFlow__/graphics/entities/duct-cross/duct-cross-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -756,7 +756,7 @@ data:extend({
   {
     type = "pipe-to-ground",
     name = "duct-underground",
-    icon = "__FluidMustFlow__/graphics/icon/entities/duct-to-ground.png",
+    icon = "__FluidMustFlow__/graphics/icons/entities/duct-to-ground.png",
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.4, result = "duct-underground" },
     fast_replaceable_group = "ducts",
@@ -791,7 +791,7 @@ data:extend({
       north = {
         layers = {
           {
-            filename = "__FluidMustFlow__/graphics/entity/duct/duct-ground/duct-ground-up.png",
+            filename = "__FluidMustFlow__/graphics/entities/duct-ground/duct-ground-up.png",
             height = 256,
             priority = "high",
             scale = 0.5,
@@ -799,7 +799,7 @@ data:extend({
           },
           {
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entity/duct/duct-ground/duct-ground-up_shadow.png",
+            filename = "__FluidMustFlow__/graphics/entities/duct-ground/duct-ground-up-shadow.png",
             height = 256,
             priority = "high",
             scale = 0.5,
@@ -810,7 +810,7 @@ data:extend({
       east = {
         layers = {
           {
-            filename = "__FluidMustFlow__/graphics/entity/duct/duct-ground/duct_ground_right.png",
+            filename = "__FluidMustFlow__/graphics/entities/duct-ground/duct-ground-right.png",
             height = 256,
             priority = "high",
             scale = 0.5,
@@ -818,7 +818,7 @@ data:extend({
           },
           {
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entity/duct/duct-ground/duct_ground_right_shadow.png",
+            filename = "__FluidMustFlow__/graphics/entities/duct-ground/duct-ground-right-shadow.png",
             height = 256,
             priority = "high",
             scale = 0.5,
@@ -829,7 +829,7 @@ data:extend({
       south = {
         layers = {
           {
-            filename = "__FluidMustFlow__/graphics/entity/duct/duct-ground/duct_ground_down.png",
+            filename = "__FluidMustFlow__/graphics/entities/duct-ground/duct-ground-down.png",
             height = 256,
             priority = "high",
             scale = 0.5,
@@ -837,7 +837,7 @@ data:extend({
           },
           {
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entity/duct/duct-ground/duct_ground_down_shadow.png",
+            filename = "__FluidMustFlow__/graphics/entities/duct-ground/duct-ground-down-shadow.png",
             height = 256,
             priority = "high",
             scale = 0.5,
@@ -848,7 +848,7 @@ data:extend({
       west = {
         layers = {
           {
-            filename = "__FluidMustFlow__/graphics/entity/duct/duct-ground/duct-ground-left.png",
+            filename = "__FluidMustFlow__/graphics/entities/duct-ground/duct-ground-left.png",
             height = 256,
             priority = "high",
             scale = 0.5,
@@ -856,7 +856,7 @@ data:extend({
           },
           {
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entity/duct/duct-ground/duct-ground-left_shadow.png",
+            filename = "__FluidMustFlow__/graphics/entities/duct-ground/duct-ground-left-shadow.png",
             height = 256,
             priority = "high",
             scale = 0.5,
@@ -867,25 +867,25 @@ data:extend({
     },
     visualization = {
       north = {
-        filename = "__FluidMustFlow__/graphics/entity/duct/duct-ground/duct_ground_visualization.png",
+        filename = "__FluidMustFlow__/graphics/entities/duct-ground/duct-ground-visualization.png",
         size = 128,
         scale = 0.5,
         flags = { "icon" },
       },
       east = {
-        filename = "__FluidMustFlow__/graphics/entity/duct/duct-ground/duct_ground_visualization.png",
+        filename = "__FluidMustFlow__/graphics/entities/duct-ground/duct-ground-visualization.png",
         size = 128,
         scale = 0.5,
         flags = { "icon" },
       },
       south = {
-        filename = "__FluidMustFlow__/graphics/entity/duct/duct-ground/duct_ground_visualization.png",
+        filename = "__FluidMustFlow__/graphics/entities/duct-ground/duct-ground-visualization.png",
         size = 128,
         scale = 0.5,
         flags = { "icon" },
       },
       west = {
-        filename = "__FluidMustFlow__/graphics/entity/duct/duct-ground/duct_ground_visualization.png",
+        filename = "__FluidMustFlow__/graphics/entities/duct-ground/duct-ground-visualization.png",
         size = 128,
         scale = 0.5,
         flags = { "icon" },
@@ -893,25 +893,25 @@ data:extend({
     },
     disabled_visualization = {
       north = {
-        filename = "__FluidMustFlow__/graphics/entity/duct/duct-ground/duct_ground_visualization.png",
+        filename = "__FluidMustFlow__/graphics/entities/duct-ground/duct-ground-visualization.png",
         size = 128,
         scale = 0.5,
         flags = { "icon" },
       },
       east = {
-        filename = "__FluidMustFlow__/graphics/entity/duct/duct-ground/duct_ground_visualization.png",
+        filename = "__FluidMustFlow__/graphics/entities/duct-ground/duct-ground-visualization.png",
         size = 128,
         scale = 0.5,
         flags = { "icon" },
       },
       south = {
-        filename = "__FluidMustFlow__/graphics/entity/duct/duct-ground/duct_ground_visualization.png",
+        filename = "__FluidMustFlow__/graphics/entities/duct-ground/duct-ground-visualization.png",
         size = 128,
         scale = 0.5,
         flags = { "icon" },
       },
       west = {
-        filename = "__FluidMustFlow__/graphics/entity/duct/duct-ground/duct_ground_visualization.png",
+        filename = "__FluidMustFlow__/graphics/entities/duct-ground/duct-ground-visualization.png",
         size = 128,
         scale = 0.5,
         flags = { "icon" },
