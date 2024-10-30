@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.4.0
-Date: ????
+Date: 2024-10-30
   Features:
     - Ducts have a max pipeline extent of 1 kilometer.
   Changes:
