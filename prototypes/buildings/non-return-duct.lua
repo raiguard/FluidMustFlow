@@ -58,11 +58,11 @@ data:extend({
     fast_replaceable_group = "duct-intermediate-points",
     collision_box = { { -0.77, -0.9 }, { 0.77, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
-    pumping_speed = 1200,
+    pumping_speed = 120,
     energy_source = { type = "void" },
     energy_usage = "1W",
     fluid_box = {
-      volume = constants.volume / 4,
+      volume = constants.volume * 2,
       pipe_covers = nil,
       pipe_connections = {
         {

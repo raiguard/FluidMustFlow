@@ -39,7 +39,7 @@ data:extend({
     selection_box = { { -1, -1 }, { 1, 1 } },
     minable = { mining_time = 0.4, result = "duct-intake" },
     fast_replaceable_group = "duct-end-points",
-    pumping_speed = 1200,
+    pumping_speed = 120,
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -47,7 +47,7 @@ data:extend({
     },
     energy_usage = "180kW", -- base 30 x4
     fluid_box = {
-      volume = constants.volume / 4,
+      volume = constants.volume * 2,
       pipe_covers = pipecoverspictures(),
       pipe_picture = {
         north = util.empty_sprite(),

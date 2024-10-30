@@ -34,7 +34,7 @@ data:extend({
     collision_box = { { -0.79, -1.99 }, { 0.79, 1.99 } },
     selection_box = { { -1, -2 }, { 1, 2 } },
     fluid_box = {
-      volume = constants.volume,
+      volume = constants.volume * 4,
       pipe_connections = {
         { direction = defines.direction.north, connection_category = "ducts", position = { 0, -1.5 } },
         { direction = defines.direction.south, connection_category = "ducts", position = { 0, 1.5 } },

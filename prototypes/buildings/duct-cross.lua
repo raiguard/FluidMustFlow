@@ -36,7 +36,7 @@ data:extend({
     minable = { mining_time = 0.8, result = "duct-cross" },
     fast_replaceable_group = "ducts",
     fluid_box = {
-      volume = constants.volume,
+      volume = constants.volume * 2,
       pipe_covers = nil,
       pipe_connections = {
         { direction = defines.direction.north, connection_category = "ducts", position = { 0, -0.5 } },
