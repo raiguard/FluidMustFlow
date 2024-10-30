@@ -31,22 +31,22 @@ data:extend({
   {
     type = "recipe",
     name = "non-return-duct",
-    energy_required = 2.0,
     enabled = false,
+    category = "crafting",
+    energy_required = 2.0,
     ingredients = {
       { type = "item", name = "iron-plate", amount = 8 },
       { type = "item", name = "iron-gear-wheel", amount = 4 },
     },
     results = { { type = "item", name = "non-return-duct", amount = 1 } },
-    category = "crafting",
   },
   {
     type = "item",
     name = "non-return-duct",
     icon = "__FluidMustFlow__/graphics/icons/buildings/non-return-duct.png",
-    place_result = "non-return-duct",
     subgroup = "energy-pipe-distribution",
     order = "d[pipe]-h[non-return-duct]",
+    place_result = "non-return-duct",
     stack_size = 10,
   },
   {
@@ -56,12 +56,11 @@ data:extend({
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.4, result = "non-return-duct" },
     fast_replaceable_group = "duct-intermediate-points",
-    max_health = 800,
-    corpse = "small-remnants",
-    dying_explosion = "pump-explosion",
-    resistances = data.raw["pump"]["pump"].resistances,
     collision_box = { { -0.77, -0.9 }, { 0.77, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
+    pumping_speed = 1200,
+    energy_source = { type = "void" },
+    energy_usage = "1W",
     fluid_box = {
       volume = constants.volume / 4,
       pipe_covers = nil,
@@ -81,6 +80,11 @@ data:extend({
       },
       max_pipeline_extent = constants.extent,
     },
+    max_health = 800,
+    corpse = "small-remnants",
+    dying_explosion = "pump-explosion",
+    resistances = data.raw["pump"]["pump"].resistances,
+    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     animations = {
       east = {
         layers = {
@@ -184,11 +188,7 @@ data:extend({
       },
     },
     fluid_wagon_connector_frame_count = 0,
-    energy_usage = "1W", -- base 30 x0
-    energy_source = { type = "void" },
-    pumping_speed = 1200,
     circuit_connector = circuit_connector,
     circuit_wire_max_distance = data.raw["storage-tank"]["storage-tank"].circuit_wire_max_distance,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
   },
 })

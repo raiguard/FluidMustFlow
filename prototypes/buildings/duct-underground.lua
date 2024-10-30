@@ -4,19 +4,19 @@ data:extend({
   {
     type = "recipe",
     name = "duct-underground",
-    energy_required = 6.0,
     enabled = false,
+    category = "crafting",
+    energy_required = 6.0,
     ingredients = { { type = "item", name = "iron-plate", amount = 60 } },
     results = { { type = "item", name = "duct-underground", amount = 2 } },
-    category = "crafting",
   },
   {
     type = "item",
     name = "duct-underground",
     icon = "__FluidMustFlow__/graphics/icons/buildings/duct-to-ground.png",
-    place_result = "duct-underground",
     subgroup = "energy-pipe-distribution",
     order = "d[pipe]-d[duct-underground]",
+    place_result = "duct-underground",
     stack_size = 50,
   },
   {
@@ -26,9 +26,6 @@ data:extend({
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.4, result = "duct-underground" },
     fast_replaceable_group = "ducts",
-    max_health = 800,
-    corpse = "small-remnants",
-    resistances = data.raw["pipe"]["pipe"].resistances,
     collision_box = { { -0.79, -0.79 }, { 0.79, 0.7 } },
     selection_box = { { -1.0, -1.0 }, { 1.0, 1.0 } },
     fluid_box = {
@@ -46,13 +43,9 @@ data:extend({
       hide_connection_info = true,
       max_pipeline_extent = constants.extent,
     },
-    underground_sprite = {
-      filename = "__core__/graphics/arrows/underground-lines.png",
-      priority = "high",
-      width = 64,
-      height = 64,
-      scale = 0.5,
-    },
+    max_health = 800,
+    corpse = "small-remnants",
+    resistances = data.raw["pipe"]["pipe"].resistances,
     pictures = {
       north = {
         layers = {
@@ -182,6 +175,13 @@ data:extend({
         scale = 0.5,
         flags = { "icon" },
       },
+    },
+    underground_sprite = {
+      filename = "__core__/graphics/arrows/underground-lines.png",
+      priority = "high",
+      width = 64,
+      height = 64,
+      scale = 0.5,
     },
   },
 })

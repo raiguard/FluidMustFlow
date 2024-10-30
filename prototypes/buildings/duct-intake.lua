@@ -11,38 +11,41 @@ data:extend({
   {
     type = "recipe",
     name = "duct-intake",
-    energy_required = 2.0,
     enabled = false,
+    category = "crafting",
+    energy_required = 2.0,
     ingredients = {
       { type = "item", name = "engine-unit", amount = 6 },
       { type = "item", name = "pipe", amount = 6 },
       { type = "item", name = "steel-plate", amount = 6 },
     },
     results = { { type = "item", name = "duct-intake", amount = 1 } },
-    category = "crafting",
   },
   {
     type = "item",
     name = "duct-intake",
     icon = "__FluidMustFlow__/graphics/icons/buildings/duct-intake.png",
-    place_result = "duct-intake",
     subgroup = "energy-pipe-distribution",
     order = "d[pipe]-i[duct-intake]",
+    place_result = "duct-intake",
     stack_size = 10,
   },
   {
     type = "pump",
     name = "duct-intake",
-    fast_replace_group = "duct-end-points",
-    next_upgrade = nil,
     icon = "__FluidMustFlow__/graphics/icons/buildings/duct-end-point.png",
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.4, result = "duct-intake" },
-    max_health = 800,
-    resistances = data.raw["pump"]["pump"].resistances,
-    corpse = "small-remnants",
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
+    minable = { mining_time = 0.4, result = "duct-intake" },
+    fast_replaceable_group = "duct-end-points",
+    pumping_speed = 1200,
+    energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+      drain = "1kW",
+    },
+    energy_usage = "180kW", -- base 30 x4
     fluid_box = {
       volume = constants.volume / 4,
       pipe_covers = pipecoverspictures(),
@@ -100,6 +103,10 @@ data:extend({
       secondary_draw_orders = { north = -1 },
       max_pipeline_extent = constants.extent,
     },
+    max_health = 800,
+    resistances = data.raw["pump"]["pump"].resistances,
+    corpse = "small-remnants",
+    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     animations = {
       north = {
         layers = {
@@ -203,15 +210,7 @@ data:extend({
       },
     },
     fluid_wagon_connector_frame_count = 0,
-    energy_source = {
-      type = "electric",
-      usage_priority = "secondary-input",
-      drain = "1kW",
-    },
-    energy_usage = "180kW", -- base 30 x4
-    pumping_speed = 1200,
     circuit_connector = circuit_connector,
     circuit_wire_max_distance = data.raw["storage-tank"]["storage-tank"].circuit_wire_max_distance,
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
   },
 })

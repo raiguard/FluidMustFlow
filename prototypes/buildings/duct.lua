@@ -5,11 +5,11 @@ if settings.startup["fmf-enable-duct-auto-join"].value then
     {
       type = "recipe",
       name = "duct",
-      energy_required = 2.0,
       enabled = false,
+      category = "crafting",
+      energy_required = 2.0,
       ingredients = { { type = "item", name = "iron-plate", amount = 8 } },
       results = { { type = "item", name = "duct", amount = 1 } },
-      category = "crafting",
     },
   })
 end
@@ -19,9 +19,9 @@ data:extend({
     type = "item",
     name = "duct",
     icon = "__FluidMustFlow__/graphics/icons/buildings/duct.png",
-    place_result = "duct",
     subgroup = "energy-pipe-distribution",
     order = "d[pipe]-b[duct]",
+    place_result = "duct",
     stack_size = 50,
   },
   {
@@ -31,10 +31,6 @@ data:extend({
     flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.8, result = "duct" },
     fast_replaceable_group = "ducts",
-    max_health = 800,
-    corpse = "small-remnants",
-    dying_explosion = "storage-tank-explosion",
-    resistances = data.raw["pipe"]["pipe"].resistances,
     collision_box = { { -0.79, -0.99 }, { 0.79, 0.99 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     fluid_box = {
@@ -47,8 +43,16 @@ data:extend({
       hide_connection_info = true,
       max_pipeline_extent = constants.extent,
     },
-    window_bounding_box = { { 0, 0 }, { 0, 0 } },
-    flow_length_in_ticks = 360,
+    max_health = 800,
+    corpse = "small-remnants",
+    dying_explosion = "storage-tank-explosion",
+    resistances = data.raw["pipe"]["pipe"].resistances,
+    working_sound = {
+      sound = { { filename = "__base__/sound/pipe.ogg", volume = 0.25 } },
+      match_volume_to_activity = true,
+      max_sounds_per_type = 3,
+    },
+    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     pictures = {
       picture = {
         north = {
@@ -133,12 +137,8 @@ data:extend({
       window_background = util.empty_sprite(),
       flow_sprite = util.empty_sprite(),
     },
-    working_sound = {
-      sound = { { filename = "__base__/sound/pipe.ogg", volume = 0.25 } },
-      match_volume_to_activity = true,
-      max_sounds_per_type = 3,
-    },
-    vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+    window_bounding_box = { { 0, 0 }, { 0, 0 } },
+    flow_length_in_ticks = 360,
     circuit_connector = constants.duct_circuit_connector,
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
