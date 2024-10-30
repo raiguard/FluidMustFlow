@@ -77,16 +77,16 @@ data:extend({
     icon_size = 128,
     icon = "__FluidMustFlow__/graphics/icons/technologies/iron-duct-tecnology.png",
     upgrade = false,
-    effects = effects,
-    prerequisites = prerequisites,
     unit = {
+      time = 20,
       count = 30,
       ingredients = {
         { "automation-science-pack", 2 },
         { "logistic-science-pack", 2 },
         { "chemical-science-pack", 1 },
       },
-      time = 20,
     },
+    prerequisites = prerequisites,
+    effects = effects,
   },
 })
