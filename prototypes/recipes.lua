@@ -58,7 +58,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "duct-end-point-intake",
+    name = "duct-intake",
     energy_required = 2.0,
     enabled = false,
     ingredients = {
@@ -66,7 +66,7 @@ data:extend({
       { type = "item", name = "pipe", amount = 6 },
       { type = "item", name = "steel-plate", amount = 6 },
     },
-    results = { { type = "item", name = "duct-end-point-intake", amount = 1 } },
+    results = { { type = "item", name = "duct-intake", amount = 1 } },
     category = "crafting",
   },
   {

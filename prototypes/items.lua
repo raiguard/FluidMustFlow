@@ -75,11 +75,11 @@ data:extend({
   },
   {
     type = "item",
-    name = "duct-end-point-intake",
-    icon = icons_path .. "duct-end-point-intake.png",
-    place_result = "duct-end-point-intake",
+    name = "duct-intake",
+    icon = icons_path .. "duct-intake.png",
+    place_result = "duct-intake",
     subgroup = "energy-pipe-distribution",
-    order = "d[pipe]-i[duct-end-point-intake]",
+    order = "d[pipe]-i[duct-intake]",
     stack_size = 10,
   },
   {

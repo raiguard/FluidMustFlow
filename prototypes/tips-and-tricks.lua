@@ -50,7 +50,7 @@ data:extend({
     },
     skip_trigger = {
       type = "build-entity",
-      entity = "duct-end-point-intake",
+      entity = "duct-intake",
       count = 1,
     },
     dependencies = { "fmf-introduction" },
@@ -69,7 +69,7 @@ data:extend({
     },
     skip_trigger = {
       type = "build-entity",
-      entity = "duct-end-point-intake",
+      entity = "duct-intake",
       count = 5,
     },
     dependencies = { "fmf-introduction" },

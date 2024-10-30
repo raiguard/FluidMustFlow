@@ -1,6 +1,6 @@
 require("prototypes.buildings.duct-cross")
 require("prototypes.buildings.duct-curve")
-require("prototypes.buildings.duct-end-point-intake")
+require("prototypes.buildings.duct-intake")
 require("prototypes.buildings.duct-end-point-outtake")
 require("prototypes.buildings.duct-long")
 require("prototypes.buildings.duct")

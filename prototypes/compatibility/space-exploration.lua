@@ -7,6 +7,6 @@ if mods["space-exploration"] then
   data.raw["item"]["duct-cross"].subgroup = "pipe"
   data.raw["item"]["duct-underground"].subgroup = "pipe"
   data.raw["item"]["non-return-duct"].subgroup = "pipe"
-  data.raw["item"]["duct-end-point-intake"].subgroup = "pipe"
+  data.raw["item"]["duct-intake"].subgroup = "pipe"
   data.raw["item"]["duct-end-point-outtake"].subgroup = "pipe"
 end

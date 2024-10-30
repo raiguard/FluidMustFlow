@@ -28,7 +28,7 @@ if mods["bobelectronics"] and mods["bobplates"] then
     { type = "item", name = "titanium-plate", amount = 12 },
     { type = "item", name = "bob-pump-2", amount = 5 },
   }
-  data.raw["recipe"]["duct-end-point-intake"].ingredients = {
+  data.raw["recipe"]["duct-intake"].ingredients = {
     { type = "item", name = "silicon-nitride", amount = 24 },
     { type = "item", name = "titanium-plate", amount = 12 },
     { type = "item", name = "bob-pump-2", amount = 10 },

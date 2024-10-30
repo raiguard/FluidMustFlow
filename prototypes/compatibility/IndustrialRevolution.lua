@@ -76,7 +76,7 @@ if mods["IndustrialRevolution"] then
     },
     {
       type = "recipe",
-      name = "duct-end-point-intake",
+      name = "duct-intake",
       energy_required = 2.0,
       enabled = "false",
       ingredients = {
@@ -85,7 +85,7 @@ if mods["IndustrialRevolution"] then
         { type = "item", name = "pipe", amount = 6 },
         { type = "item", name = "iron-beam", amount = 4 },
       },
-      result = "duct-end-point-intake",
+      result = "duct-intake",
       result_count = 1,
       category = "crafting",
     },

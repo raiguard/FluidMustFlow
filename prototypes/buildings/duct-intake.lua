@@ -10,12 +10,12 @@ local circuit_connector = circuit_connector_definitions.create_vector(universal_
 data:extend({
   {
     type = "pump",
-    name = "duct-end-point-intake",
+    name = "duct-intake",
     fast_replace_group = "duct-end-points",
     next_upgrade = nil,
     icon = "__FluidMustFlow__/graphics/icons/buildings/duct-end-point.png",
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.4, result = "duct-end-point-intake" },
+    minable = { mining_time = 0.4, result = "duct-intake" },
     max_health = 800,
     resistances = data.raw["pump"]["pump"].resistances,
     corpse = "small-remnants",
@@ -83,7 +83,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/buildings/duct-end-point-intake/duct-end-point-intake-down.png",
+            filename = "__FluidMustFlow__/graphics/buildings/duct-intake/duct-intake-down.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -108,7 +108,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/buildings/duct-end-point-intake/duct-end-point-intake-left.png",
+            filename = "__FluidMustFlow__/graphics/buildings/duct-intake/duct-intake-left.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -133,7 +133,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/buildings/duct-end-point-intake/duct-end-point-intake-up.png",
+            filename = "__FluidMustFlow__/graphics/buildings/duct-intake/duct-intake-up.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -158,7 +158,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/buildings/duct-end-point-intake/duct-end-point-intake-right.png",
+            filename = "__FluidMustFlow__/graphics/buildings/duct-intake/duct-intake-right.png",
             frame_count = 8,
             height = 256,
             line_length = 4,

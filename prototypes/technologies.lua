@@ -25,7 +25,7 @@ local effects = {
   },
   {
     type = "unlock-recipe",
-    recipe = "duct-end-point-intake",
+    recipe = "duct-intake",
   },
   {
     type = "unlock-recipe",
