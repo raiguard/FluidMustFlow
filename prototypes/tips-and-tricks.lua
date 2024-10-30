@@ -10,7 +10,7 @@ data:extend({
     is_title = true,
     trigger = {
       type = "research",
-      technology = "Ducts",
+      technology = "ducts",
     },
     simulation = simulations.introduction,
   },

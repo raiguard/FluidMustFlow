@@ -10,5 +10,8 @@
   "recipe": [
     ["duct-end-point-intake", "duct-intake"],
     ["duct-end-point-outtake", "duct-exhaust"]
+  ],
+  "technology": [
+    ["Ducts", "ducts"]
   ]
 }

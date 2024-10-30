@@ -72,10 +72,9 @@ end
 data:extend({
   {
     type = "technology",
-    -- WHY IS THIS CAPITALIZED!?!?!?!?!?!
-    name = "Ducts",
+    name = "ducts",
+    icon = "__FluidMustFlow__/graphics/icons/technologies/ducts.png",
     icon_size = 128,
-    icon = "__FluidMustFlow__/graphics/icons/technologies/iron-duct-tecnology.png",
     upgrade = false,
     unit = {
       time = 20,
