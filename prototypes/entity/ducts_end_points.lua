@@ -35,7 +35,7 @@ data:extend({
         north = util.empty_sprite(),
         east = util.empty_sprite(),
         south = {
-          filename = "__FluidMustFlow__/graphics/entity/other/hr_pipe-straight-vertical.png",
+          filename = "__FluidMustFlow__/graphics/entity/other/pipe-straight-vertical.png",
           priority = "extra-high",
           width = 45,
           height = 40,
@@ -90,7 +90,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_point_intake/hr_duct_end_point_intake_down.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_point_intake/duct_end_point_intake_down.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -101,7 +101,7 @@ data:extend({
           {
             animation_speed = 0.8,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/hr_duct_end_points_down_shadow.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_points_down_shadow.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -115,7 +115,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_point_intake/hr_duct_end_point_intake_left.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_point_intake/duct_end_point_intake_left.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -126,7 +126,7 @@ data:extend({
           {
             animation_speed = 0.8,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/hr_duct_end_points_left_shadow.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_points_left_shadow.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -140,7 +140,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_point_intake/hr_duct_end_point_intake_up.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_point_intake/duct_end_point_intake_up.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -151,7 +151,7 @@ data:extend({
           {
             animation_speed = 0.8,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/hr_duct_end_points_up_shadow.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_points_up_shadow.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -165,7 +165,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_point_intake/hr_duct_end_point_intake_right.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_point_intake/duct_end_point_intake_right.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -176,7 +176,7 @@ data:extend({
           {
             animation_speed = 0.8,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/hr_duct_end_points_right_shadow.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_points_right_shadow.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -220,7 +220,7 @@ data:extend({
         north = util.empty_sprite(),
         east = util.empty_sprite(),
         south = {
-          filename = "__FluidMustFlow__/graphics/entity/other/hr_pipe-straight-vertical.png",
+          filename = "__FluidMustFlow__/graphics/entity/other/pipe-straight-vertical.png",
           priority = "extra-high",
           width = 45,
           height = 40,
@@ -275,7 +275,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_point_outtake/hr_duct_end_point_outtake_up.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_point_outtake/duct_end_point_outtake_up.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -286,7 +286,7 @@ data:extend({
           {
             animation_speed = 0.8,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/hr_duct_end_points_up_shadow.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_points_up_shadow.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -300,7 +300,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_point_outtake/hr_duct_end_point_outtake_right.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_point_outtake/duct_end_point_outtake_right.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -311,7 +311,7 @@ data:extend({
           {
             animation_speed = 0.8,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/hr_duct_end_points_right_shadow.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_points_right_shadow.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -325,7 +325,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_point_outtake/hr_duct_end_point_outtake_down.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_point_outtake/duct_end_point_outtake_down.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -336,7 +336,7 @@ data:extend({
           {
             animation_speed = 0.8,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/hr_duct_end_points_down_shadow.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_points_down_shadow.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -350,7 +350,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_point_outtake/hr_duct_end_point_outtake_left.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_point_outtake/duct_end_point_outtake_left.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -361,7 +361,7 @@ data:extend({
           {
             animation_speed = 0.8,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/hr_duct_end_points_left_shadow.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_end_points/duct_end_points_left_shadow.png",
             frame_count = 8,
             height = 256,
             line_length = 4,

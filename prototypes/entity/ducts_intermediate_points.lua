@@ -65,7 +65,7 @@ data:extend({
         layers = {
           {
             animation_speed = 1,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_intermediate_points/hr_non_return_duct_right.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_intermediate_points/non_return_duct_right.png",
             frame_count = 16,
             height = 256,
             line_length = 4,
@@ -76,7 +76,7 @@ data:extend({
           {
             animation_speed = 1,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_intermediate_points/hr_non_return_duct_horizontal_shadow.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_intermediate_points/non_return_duct_horizontal_shadow.png",
             frame_count = 16,
             height = 256,
             line_length = 4,
@@ -90,7 +90,7 @@ data:extend({
         layers = {
           {
             animation_speed = 1,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_intermediate_points/hr_non_return_duct_up.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_intermediate_points/non_return_duct_up.png",
             frame_count = 16,
             height = 256,
             line_length = 4,
@@ -101,7 +101,7 @@ data:extend({
           {
             animation_speed = 1,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_intermediate_points/hr_non_return_duct_vertical_shadow.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_intermediate_points/non_return_duct_vertical_shadow.png",
             frame_count = 16,
             height = 256,
             line_length = 4,
@@ -115,7 +115,7 @@ data:extend({
         layers = {
           {
             animation_speed = 1,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_intermediate_points/hr_non_return_duct_down.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_intermediate_points/non_return_duct_down.png",
             frame_count = 16,
             height = 256,
             line_length = 4,
@@ -126,7 +126,7 @@ data:extend({
           {
             animation_speed = 1,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_intermediate_points/hr_non_return_duct_vertical_shadow.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_intermediate_points/non_return_duct_vertical_shadow.png",
             frame_count = 16,
             height = 256,
             line_length = 4,
@@ -140,7 +140,7 @@ data:extend({
         layers = {
           {
             animation_speed = 1,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_intermediate_points/hr_non_return_duct_left.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_intermediate_points/non_return_duct_left.png",
             frame_count = 16,
             height = 256,
             line_length = 4,
@@ -151,7 +151,7 @@ data:extend({
           {
             animation_speed = 1,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entity/ducts_intermediate_points/hr_non_return_duct_horizontal_shadow.png",
+            filename = "__FluidMustFlow__/graphics/entity/ducts_intermediate_points/non_return_duct_horizontal_shadow.png",
             frame_count = 16,
             height = 256,
             line_length = 4,
