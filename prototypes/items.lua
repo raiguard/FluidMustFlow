@@ -84,11 +84,11 @@ data:extend({
   },
   {
     type = "item",
-    name = "duct-end-point-outtake",
-    icon = icons_path .. "duct-end-point-outtake.png",
-    place_result = "duct-end-point-outtake",
+    name = "duct-exhaust",
+    icon = icons_path .. "duct-exhaust.png",
+    place_result = "duct-exhaust",
     subgroup = "energy-pipe-distribution",
-    order = "d[pipe]-l[duct-end-point-outtake]",
+    order = "d[pipe]-l[duct-exhaust]",
     stack_size = 10,
   },
 })

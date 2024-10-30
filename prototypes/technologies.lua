@@ -29,7 +29,7 @@ local effects = {
   },
   {
     type = "unlock-recipe",
-    recipe = "duct-end-point-outtake",
+    recipe = "duct-exhaust",
   },
 }
 

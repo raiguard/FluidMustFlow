@@ -30,7 +30,7 @@ if mods["Squeak Through"] then
     },
     ["pump"] = {
       "duct-intake",
-      "duct-end-point-outtake",
+      "duct-exhaust",
       "non-return-duct",
     },
   }

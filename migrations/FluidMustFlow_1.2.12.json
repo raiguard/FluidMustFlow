@@ -5,9 +5,9 @@
         ["duct-intake-west", "duct-intake"],
         ["duct-intake-north", "duct-intake"],
         ["duct-intake-east", "duct-intake"],
-        ["duct-end-point-outtake-south", "duct-end-point-outtake"],
-        ["duct-end-point-outtake-west", "duct-end-point-outtake"],
-        ["duct-end-point-outtake-north", "duct-end-point-outtake"],
-        ["duct-end-point-outtake-east", "duct-end-point-outtake"]
+        ["duct-exhaust-south", "duct-exhaust"],
+        ["duct-exhaust-west", "duct-exhaust"],
+        ["duct-exhaust-north", "duct-exhaust"],
+        ["duct-exhaust-east", "duct-exhaust"]
     ]
 }

@@ -10,12 +10,12 @@ local circuit_connector = circuit_connector_definitions.create_vector(universal_
 data:extend({
   {
     type = "pump",
-    name = "duct-end-point-outtake",
+    name = "duct-exhaust",
     fast_replace_group = "duct-end-points",
     next_upgrade = nil,
     icon = "__FluidMustFlow__/graphics/icons/buildings/duct-end-point.png",
     flags = { "placeable-neutral", "player-creation" },
-    minable = { mining_time = 0.4, result = "duct-end-point-outtake" },
+    minable = { mining_time = 0.4, result = "duct-exhaust" },
     max_health = 800,
     resistances = data.raw["pump"]["pump"].resistances,
     corpse = "small-remnants",
@@ -83,7 +83,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/buildings/duct-end-point-outtake/duct-end-point-outtake-up.png",
+            filename = "__FluidMustFlow__/graphics/buildings/duct-exhaust/duct-exhaust-up.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -108,7 +108,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/buildings/duct-end-point-outtake/duct-end-point-outtake-right.png",
+            filename = "__FluidMustFlow__/graphics/buildings/duct-exhaust/duct-exhaust-right.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -133,7 +133,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/buildings/duct-end-point-outtake/duct-end-point-outtake-down.png",
+            filename = "__FluidMustFlow__/graphics/buildings/duct-exhaust/duct-exhaust-down.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -158,7 +158,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/buildings/duct-end-point-outtake/duct-end-point-outtake-left.png",
+            filename = "__FluidMustFlow__/graphics/buildings/duct-exhaust/duct-exhaust-left.png",
             frame_count = 8,
             height = 256,
             line_length = 4,

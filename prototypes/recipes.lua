@@ -71,7 +71,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "duct-end-point-outtake",
+    name = "duct-exhaust",
     energy_required = 2.0,
     enabled = false,
     ingredients = {
@@ -79,7 +79,7 @@ data:extend({
       { type = "item", name = "pipe", amount = 6 },
       { type = "item", name = "steel-plate", amount = 6 },
     },
-    results = { { type = "item", name = "duct-end-point-outtake", amount = 1 } },
+    results = { { type = "item", name = "duct-exhaust", amount = 1 } },
     category = "crafting",
   },
 })
