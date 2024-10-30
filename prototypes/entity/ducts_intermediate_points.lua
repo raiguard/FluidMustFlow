@@ -1,3 +1,5 @@
+local constants = require("prototypes.constants")
+
 local connector_def = circuit_connector_definitions.create_vector(universal_connector_template, {
   {
     variation = 24,
@@ -40,7 +42,7 @@ data:extend({
     collision_box = { { -0.77, -0.9 }, { 0.77, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     fluid_box = {
-      volume = VOLUME / 4,
+      volume = constants.volume / 4,
       pipe_covers = nil,
       pipe_connections = {
         {

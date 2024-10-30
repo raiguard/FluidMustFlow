@@ -1,3 +1,5 @@
+local constants = require("prototypes.constants")
+
 local connector_def = circuit_connector_definitions.create_vector(universal_connector_template, {
   { variation = 0, main_offset = util.by_pixel(5, -18), shadow_offset = util.by_pixel(2, 0), draw_shadow = true },
   { variation = 0, main_offset = util.by_pixel(5, -14), shadow_offset = util.by_pixel(2, 0), draw_shadow = true },
@@ -41,7 +43,7 @@ data:extend({
     collision_box = { { -0.79, -0.49 }, { 0.79, 0.49 } },
     selection_box = { { -1, -0.5 }, { 1, 0.5 } },
     fluid_box = {
-      volume = VOLUME / 4,
+      volume = constants.volume / 4,
       pipe_covers = nil,
       pipe_connections = {
         { direction = defines.direction.north, connection_category_bitmask = 2, position = { 0, -0.25 } },
@@ -167,7 +169,7 @@ data:extend({
     collision_box = { { -0.79, -0.99 }, { 0.79, 0.99 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     fluid_box = {
-      volume = VOLUME / 2,
+      volume = constants.volume / 2,
       pipe_covers = nil,
       pipe_connections = {
         { direction = defines.direction.north, connection_category_bitmask = 2, position = { 0, -0.5 } },
@@ -285,7 +287,7 @@ data:extend({
     collision_box = { { -0.79, -1.99 }, { 0.79, 1.99 } },
     selection_box = { { -1, -2 }, { 1, 2 } },
     fluid_box = {
-      volume = VOLUME,
+      volume = constants.volume,
       pipe_connections = {
         { direction = defines.direction.north, connection_category_bitmask = 2, position = { 0, -1.5 } },
         { direction = defines.direction.south, connection_category_bitmask = 2, position = { 0, 1.5 } },
@@ -402,7 +404,7 @@ data:extend({
     collision_box = { { -0.99, -0.99 }, { 0.99, 0.79 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     fluid_box = {
-      volume = VOLUME / 2,
+      volume = constants.volume / 2,
       pipe_covers = nil,
       pipe_connections = {
         { direction = defines.direction.north, connection_category_bitmask = 2, position = { 0, -0.5 } },
@@ -521,7 +523,7 @@ data:extend({
     collision_box = { { -0.99, -0.99 }, { 0.79, 0.79 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     fluid_box = {
-      volume = VOLUME / 4,
+      volume = constants.volume / 4,
       pipe_covers = nil,
       pipe_connections = {
         { direction = defines.direction.north, connection_category_bitmask = 2, position = { 0, -0.5 } },
@@ -639,7 +641,7 @@ data:extend({
     collision_box = { { -0.99, -0.99 }, { 0.99, 0.99 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     fluid_box = {
-      volume = VOLUME,
+      volume = constants.volume,
       pipe_covers = nil,
       pipe_connections = {
         { direction = defines.direction.north, connection_category_bitmask = 2, position = { 0, -0.5 } },
@@ -758,7 +760,7 @@ data:extend({
     collision_box = { { -0.79, -0.79 }, { 0.79, 0.7 } },
     selection_box = { { -1.0, -1.0 }, { 1.0, 1.0 } },
     fluid_box = {
-      volume = VOLUME / 4,
+      volume = constants.volume / 4,
       pipe_connections = {
         { direction = defines.direction.north, connection_category_bitmask = 2, position = { 0, -0.5 } },
         {

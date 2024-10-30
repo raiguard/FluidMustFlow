@@ -1,3 +1,5 @@
+local constants = require("prototypes.constants")
+
 local intake_connector_def = circuit_connector_definitions.create_vector(universal_connector_template, {
   { variation = 26, main_offset = util.by_pixel(0, -3), shadow_offset = util.by_pixel(2, -3), show_shadow = true },
   { variation = 26, main_offset = util.by_pixel(0, 0), shadow_offset = util.by_pixel(2, 0), show_shadow = true },
@@ -27,7 +29,7 @@ data:extend({
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     fluid_box = {
-      volume = VOLUME / 4,
+      volume = constants.volume / 4,
       pipe_covers = pipecoverspictures(),
       pipe_picture = {
         north = util.empty_sprite(),
@@ -217,7 +219,7 @@ data:extend({
     collision_box = { { -0.9, -0.9 }, { 0.9, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     fluid_box = {
-      volume = VOLUME / 4,
+      volume = constants.volume / 4,
       pipe_covers = pipecoverspictures(),
       pipe_picture = {
         north = util.empty_sprite(),
