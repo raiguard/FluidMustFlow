@@ -47,13 +47,13 @@ data:extend({
       pipe_connections = {
         {
           direction = defines.direction.north,
-          connection_category_bitmask = 2,
+          connection_category = "ducts",
           position = { 0, -0.5 },
           flow_direction = "output",
         },
         {
           direction = defines.direction.south,
-          connection_category_bitmask = 2,
+          connection_category = "ducts",
           position = { 0, 0.5 },
           flow_direction = "input",
         },
