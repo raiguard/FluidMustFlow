@@ -9,8 +9,6 @@ require("prototypes.buildings.duct-t-junction")
 require("prototypes.buildings.duct-underground")
 require("prototypes.buildings.non-return-duct")
 
-require("prototypes.items")
-require("prototypes.recipes")
 require("prototypes.technologies")
 require("prototypes.tips-and-tricks")
 

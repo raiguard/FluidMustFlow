@@ -29,6 +29,27 @@ local circuit_connector = circuit_connector_definitions.create_vector(universal_
 
 data:extend({
   {
+    type = "recipe",
+    name = "non-return-duct",
+    energy_required = 2.0,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "iron-plate", amount = 8 },
+      { type = "item", name = "iron-gear-wheel", amount = 4 },
+    },
+    results = { { type = "item", name = "non-return-duct", amount = 1 } },
+    category = "crafting",
+  },
+  {
+    type = "item",
+    name = "non-return-duct",
+    icon = "__FluidMustFlow__/graphics/icons/buildings/non-return-duct.png",
+    place_result = "non-return-duct",
+    subgroup = "energy-pipe-distribution",
+    order = "d[pipe]-h[non-return-duct]",
+    stack_size = 10,
+  },
+  {
     type = "pump",
     name = "non-return-duct",
     icon = "__FluidMustFlow__/graphics/icons/buildings/non-return-duct.png",

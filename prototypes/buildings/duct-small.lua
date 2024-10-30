@@ -2,6 +2,24 @@ local constants = require("prototypes.constants")
 
 data:extend({
   {
+    type = "recipe",
+    name = "duct-small",
+    energy_required = 2.0,
+    enabled = false,
+    ingredients = { { type = "item", name = "iron-plate", amount = 4 } },
+    results = { { type = "item", name = "duct-small", amount = 1 } },
+    category = "crafting",
+  },
+  {
+    type = "item",
+    name = "duct-small",
+    icon = "__FluidMustFlow__/graphics/icons/buildings/duct-small.png",
+    place_result = "duct-small",
+    subgroup = "energy-pipe-distribution",
+    order = "d[pipe]-a[duct-small]",
+    stack_size = 50,
+  },
+  {
     type = "storage-tank",
     name = "duct-small",
     icon = "__FluidMustFlow__/graphics/icons/buildings/duct-small.png",

@@ -9,6 +9,28 @@ local circuit_connector = circuit_connector_definitions.create_vector(universal_
 
 data:extend({
   {
+    type = "recipe",
+    name = "duct-exhaust",
+    energy_required = 2.0,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "engine-unit", amount = 6 },
+      { type = "item", name = "pipe", amount = 6 },
+      { type = "item", name = "steel-plate", amount = 6 },
+    },
+    results = { { type = "item", name = "duct-exhaust", amount = 1 } },
+    category = "crafting",
+  },
+  {
+    type = "item",
+    name = "duct-exhaust",
+    icon = "__FluidMustFlow__/graphics/icons/buildings/duct-exhaust.png",
+    place_result = "duct-exhaust",
+    subgroup = "energy-pipe-distribution",
+    order = "d[pipe]-l[duct-exhaust]",
+    stack_size = 10,
+  },
+  {
     type = "pump",
     name = "duct-exhaust",
     fast_replace_group = "duct-end-points",

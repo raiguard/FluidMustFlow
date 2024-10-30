@@ -9,6 +9,24 @@ local circuit_connector = circuit_connector_definitions.create_vector(universal_
 
 data:extend({
   {
+    type = "recipe",
+    name = "duct-cross",
+    energy_required = 2.0,
+    enabled = false,
+    ingredients = { { type = "item", name = "iron-plate", amount = 8 } },
+    results = { { type = "item", name = "duct-cross", amount = 1 } },
+    category = "crafting",
+  },
+  {
+    type = "item",
+    name = "duct-cross",
+    icon = "__FluidMustFlow__/graphics/icons/buildings/duct-cross.png",
+    place_result = "duct-cross",
+    subgroup = "energy-pipe-distribution",
+    order = "d[pipe]-g[duct-cross]",
+    stack_size = 50,
+  },
+  {
     type = "storage-tank",
     name = "duct-cross",
     icon = "__FluidMustFlow__/graphics/icons/buildings/duct-cross.png",

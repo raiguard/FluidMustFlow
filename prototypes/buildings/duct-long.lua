@@ -1,6 +1,29 @@
 local constants = require("prototypes.constants")
 
+if settings.startup["fmf-enable-duct-auto-join"].value then
+  data:extend({
+    {
+      type = "recipe",
+      name = "duct-long",
+      energy_required = 2.0,
+      enabled = false,
+      ingredients = { { type = "item", name = "iron-plate", amount = 16 } },
+      results = { { type = "item", name = "duct-long", amount = 1 } },
+      category = "crafting",
+    },
+  })
+end
+
 data:extend({
+  {
+    type = "item",
+    name = "duct-long",
+    icon = "__FluidMustFlow__/graphics/icons/buildings/duct-long.png",
+    place_result = "duct-long",
+    subgroup = "energy-pipe-distribution",
+    order = "d[pipe]-c[duct-long]",
+    stack_size = 50,
+  },
   {
     type = "storage-tank",
     name = "duct-long",

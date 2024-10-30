@@ -9,6 +9,24 @@ local circuit_connector = circuit_connector_definitions.create_vector(universal_
 
 data:extend({
   {
+    type = "recipe",
+    name = "duct-curve",
+    energy_required = 2.0,
+    enabled = false,
+    ingredients = { { type = "item", name = "iron-plate", amount = 8 } },
+    results = { { type = "item", name = "duct-curve", amount = 1 } },
+    category = "crafting",
+  },
+  {
+    type = "item",
+    name = "duct-curve",
+    icon = "__FluidMustFlow__/graphics/icons/buildings/duct-curve.png",
+    place_result = "duct-curve",
+    subgroup = "energy-pipe-distribution",
+    order = "d[pipe]-f[duct-curve]",
+    stack_size = 50,
+  },
+  {
     type = "storage-tank",
     name = "duct-curve",
     icon = "__FluidMustFlow__/graphics/icons/buildings/duct-curve.png",
