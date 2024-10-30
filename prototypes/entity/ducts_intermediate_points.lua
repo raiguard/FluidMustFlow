@@ -58,6 +58,7 @@ data:extend({
           flow_direction = "input",
         },
       },
+      max_pipeline_extent = constants.extent,
     },
     animations = {
       east = {

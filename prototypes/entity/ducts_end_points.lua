@@ -89,6 +89,7 @@ data:extend({
         },
       },
       secondary_draw_orders = { north = -1 },
+      max_pipeline_extent = constants.extent,
     },
     animations = {
       north = {
@@ -279,6 +280,7 @@ data:extend({
         },
       },
       secondary_draw_orders = { north = -1 },
+      max_pipeline_extent = constants.extent,
     },
     animations = {
       north = {
