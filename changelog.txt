@@ -5,6 +5,7 @@ Date: ????
     - Ducts have a max pipeline extent of 1 kilometer.
   Changes:
     - Updated to Factorio 2.0.
+    - Updated several internal names to match the display names.
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.5
 Date: 2023-05-09

@@ -1,6 +1,6 @@
 local constants = require("prototypes.constants")
 
-local connector_def = circuit_connector_definitions.create_vector(universal_connector_template, {
+local circuit_connector = circuit_connector_definitions.create_vector(universal_connector_template, {
   {
     variation = 24,
     main_offset = util.by_pixel(-22, 5),
@@ -166,8 +166,7 @@ data:extend({
     energy_usage = "1W", -- base 30 x0
     energy_source = { type = "void" },
     pumping_speed = 1200,
-    circuit_wire_connection_points = connector_def.points,
-    circuit_connector_sprites = connector_def.sprites,
+    circuit_connector = circuit_connector,
     circuit_wire_max_distance = data.raw["storage-tank"]["storage-tank"].circuit_wire_max_distance,
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
   },
