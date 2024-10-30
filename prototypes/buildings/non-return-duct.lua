@@ -31,7 +31,7 @@ data:extend({
   {
     type = "pump",
     name = "non-return-duct",
-    icon = "__FluidMustFlow__/graphics/icons/entities/non-return-duct.png",
+    icon = "__FluidMustFlow__/graphics/icons/buildings/non-return-duct.png",
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.4, result = "non-return-duct" },
     fast_replaceable_group = "duct-intermediate-points",
@@ -65,7 +65,7 @@ data:extend({
         layers = {
           {
             animation_speed = 1,
-            filename = "__FluidMustFlow__/graphics/entities/non-return-duct/non-return-duct-right.png",
+            filename = "__FluidMustFlow__/graphics/buildings/non-return-duct/non-return-duct-right.png",
             frame_count = 16,
             height = 256,
             line_length = 4,
@@ -76,7 +76,7 @@ data:extend({
           {
             animation_speed = 1,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entities/non-return-duct/non-return-duct-horizontal-shadow.png",
+            filename = "__FluidMustFlow__/graphics/buildings/non-return-duct/non-return-duct-horizontal-shadow.png",
             frame_count = 16,
             height = 256,
             line_length = 4,
@@ -90,7 +90,7 @@ data:extend({
         layers = {
           {
             animation_speed = 1,
-            filename = "__FluidMustFlow__/graphics/entities/non-return-duct/non-return-duct-up.png",
+            filename = "__FluidMustFlow__/graphics/buildings/non-return-duct/non-return-duct-up.png",
             frame_count = 16,
             height = 256,
             line_length = 4,
@@ -101,7 +101,7 @@ data:extend({
           {
             animation_speed = 1,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entities/non-return-duct/non-return-duct-vertical-shadow.png",
+            filename = "__FluidMustFlow__/graphics/buildings/non-return-duct/non-return-duct-vertical-shadow.png",
             frame_count = 16,
             height = 256,
             line_length = 4,
@@ -115,7 +115,7 @@ data:extend({
         layers = {
           {
             animation_speed = 1,
-            filename = "__FluidMustFlow__/graphics/entities/non-return-duct/non-return-duct-down.png",
+            filename = "__FluidMustFlow__/graphics/buildings/non-return-duct/non-return-duct-down.png",
             frame_count = 16,
             height = 256,
             line_length = 4,
@@ -126,7 +126,7 @@ data:extend({
           {
             animation_speed = 1,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entities/non-return-duct/non-return-duct-vertical-shadow.png",
+            filename = "__FluidMustFlow__/graphics/buildings/non-return-duct/non-return-duct-vertical-shadow.png",
             frame_count = 16,
             height = 256,
             line_length = 4,
@@ -140,7 +140,7 @@ data:extend({
         layers = {
           {
             animation_speed = 1,
-            filename = "__FluidMustFlow__/graphics/entities/non-return-duct/non-return-duct-left.png",
+            filename = "__FluidMustFlow__/graphics/buildings/non-return-duct/non-return-duct-left.png",
             frame_count = 16,
             height = 256,
             line_length = 4,
@@ -151,7 +151,7 @@ data:extend({
           {
             animation_speed = 1,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entities/non-return-duct/non-return-duct-horizontal-shadow.png",
+            filename = "__FluidMustFlow__/graphics/buildings/non-return-duct/non-return-duct-horizontal-shadow.png",
             frame_count = 16,
             height = 256,
             line_length = 4,

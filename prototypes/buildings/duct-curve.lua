@@ -1,32 +1,31 @@
 local constants = require("prototypes.constants")
 
 local circuit_connector = circuit_connector_definitions.create_vector(universal_connector_template, {
-  { variation = 0, main_offset = util.by_pixel(5, -18), shadow_offset = util.by_pixel(2, 0), draw_shadow = true },
-  { variation = 0, main_offset = util.by_pixel(5, -14), shadow_offset = util.by_pixel(2, 0), draw_shadow = true },
-  { variation = 0, main_offset = util.by_pixel(5, -10), shadow_offset = util.by_pixel(2, 0), draw_shadow = true },
-  { variation = 0, main_offset = util.by_pixel(5, -14), shadow_offset = util.by_pixel(2, 0), draw_shadow = true },
+  { variation = 0, main_offset = util.by_pixel(5, -32), shadow_offset = util.by_pixel(2, 0), draw_shadow = true },
+  { variation = 0, main_offset = util.by_pixel(5, -32), shadow_offset = util.by_pixel(2, 0), draw_shadow = true },
+  { variation = 0, main_offset = util.by_pixel(5, 2), shadow_offset = util.by_pixel(2, 0), draw_shadow = true },
+  { variation = 0, main_offset = util.by_pixel(5, 2), shadow_offset = util.by_pixel(2, 0), draw_shadow = true },
 })
 
 data:extend({
   {
     type = "storage-tank",
-    name = "duct-t-junction",
-    icon = "__FluidMustFlow__/graphics/icons/entities/duct-t-junction.png",
+    name = "duct-curve",
+    icon = "__FluidMustFlow__/graphics/icons/buildings/duct-curve.png",
     flags = { "placeable-player", "player-creation" },
-    minable = { mining_time = 0.8, result = "duct-t-junction" },
+    minable = { mining_time = 0.8, result = "duct-curve" },
     fast_replaceable_group = "ducts",
     max_health = 400,
     corpse = "small-remnants",
     dying_explosion = "storage-tank-explosion",
     resistances = data.raw["pipe"]["pipe"].resistances,
-    collision_box = { { -0.99, -0.99 }, { 0.99, 0.79 } },
+    collision_box = { { -0.99, -0.99 }, { 0.79, 0.79 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
     fluid_box = {
-      volume = constants.volume / 2,
+      volume = constants.volume / 4,
       pipe_covers = nil,
       pipe_connections = {
         { direction = defines.direction.north, connection_category = "ducts", position = { 0, -0.5 } },
-        { direction = defines.direction.east, connection_category = "ducts", position = { 0.5, 0 } },
         { direction = defines.direction.west, connection_category = "ducts", position = { -0.5, 0 } },
       },
       hide_connection_info = true,
@@ -39,7 +38,7 @@ data:extend({
         north = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entities/duct-t-junction/duct-t-junction-up.png",
+              filename = "__FluidMustFlow__/graphics/buildings/duct-corner/duct-corner-up-left.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -47,7 +46,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entities/duct-t-junction/duct-t-junction-up-shadow.png",
+              filename = "__FluidMustFlow__/graphics/buildings/duct-corner/duct-corner-up-left-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -58,7 +57,7 @@ data:extend({
         east = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entities/duct-t-junction/duct-t-junction-right.png",
+              filename = "__FluidMustFlow__/graphics/buildings/duct-corner/duct-corner-up-right.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -66,7 +65,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entities/duct-t-junction/duct-t-junction-right-shadow.png",
+              filename = "__FluidMustFlow__/graphics/buildings/duct-corner/duct-corner-up-right-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -77,7 +76,7 @@ data:extend({
         south = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entities/duct-t-junction/duct-t-junction-down.png",
+              filename = "__FluidMustFlow__/graphics/buildings/duct-corner/duct-corner-down-right.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -85,7 +84,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entities/duct-t-junction/duct-t-junction-down-shadow.png",
+              filename = "__FluidMustFlow__/graphics/buildings/duct-corner/duct-corner-down-right-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -96,7 +95,7 @@ data:extend({
         west = {
           layers = {
             {
-              filename = "__FluidMustFlow__/graphics/entities/duct-t-junction/duct-t-junction-left.png",
+              filename = "__FluidMustFlow__/graphics/buildings/duct-corner/duct-corner-down-left.png",
               height = 256,
               priority = "high",
               scale = 0.5,
@@ -104,7 +103,7 @@ data:extend({
             },
             {
               draw_as_shadow = true,
-              filename = "__FluidMustFlow__/graphics/entities/duct-t-junction/duct-t-junction-left-shadow.png",
+              filename = "__FluidMustFlow__/graphics/buildings/duct-corner/duct-corner-down-left-shadow.png",
               height = 256,
               priority = "high",
               scale = 0.5,

@@ -13,7 +13,7 @@ data:extend({
     name = "duct-end-point-outtake",
     fast_replace_group = "duct-end-points",
     next_upgrade = nil,
-    icon = "__FluidMustFlow__/graphics/icons/entities/duct-end-point.png",
+    icon = "__FluidMustFlow__/graphics/icons/buildings/duct-end-point.png",
     flags = { "placeable-neutral", "player-creation" },
     minable = { mining_time = 0.4, result = "duct-end-point-outtake" },
     max_health = 800,
@@ -28,7 +28,7 @@ data:extend({
         north = util.empty_sprite(),
         east = util.empty_sprite(),
         south = {
-          filename = "__FluidMustFlow__/graphics/entities/pipe-straight-vertical.png",
+          filename = "__FluidMustFlow__/graphics/buildings/pipe-straight-vertical.png",
           priority = "extra-high",
           width = 45,
           height = 40,
@@ -83,7 +83,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/entities/duct-end-point-outtake/duct-end-point-outtake-up.png",
+            filename = "__FluidMustFlow__/graphics/buildings/duct-end-point-outtake/duct-end-point-outtake-up.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -94,7 +94,7 @@ data:extend({
           {
             animation_speed = 0.8,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entities/duct-end-points-up-shadow.png",
+            filename = "__FluidMustFlow__/graphics/buildings/duct-end-points-up-shadow.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -108,7 +108,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/entities/duct-end-point-outtake/duct-end-point-outtake-right.png",
+            filename = "__FluidMustFlow__/graphics/buildings/duct-end-point-outtake/duct-end-point-outtake-right.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -119,7 +119,7 @@ data:extend({
           {
             animation_speed = 0.8,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entities/duct-end-points-right-shadow.png",
+            filename = "__FluidMustFlow__/graphics/buildings/duct-end-points-right-shadow.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -133,7 +133,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/entities/duct-end-point-outtake/duct-end-point-outtake-down.png",
+            filename = "__FluidMustFlow__/graphics/buildings/duct-end-point-outtake/duct-end-point-outtake-down.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -144,7 +144,7 @@ data:extend({
           {
             animation_speed = 0.8,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entities/duct-end-points-down-shadow.png",
+            filename = "__FluidMustFlow__/graphics/buildings/duct-end-points-down-shadow.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -158,7 +158,7 @@ data:extend({
         layers = {
           {
             animation_speed = 0.8,
-            filename = "__FluidMustFlow__/graphics/entities/duct-end-point-outtake/duct-end-point-outtake-left.png",
+            filename = "__FluidMustFlow__/graphics/buildings/duct-end-point-outtake/duct-end-point-outtake-left.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
@@ -169,7 +169,7 @@ data:extend({
           {
             animation_speed = 0.8,
             draw_as_shadow = true,
-            filename = "__FluidMustFlow__/graphics/entities/duct-end-points-left-shadow.png",
+            filename = "__FluidMustFlow__/graphics/buildings/duct-end-points-left-shadow.png",
             frame_count = 8,
             height = 256,
             line_length = 4,
