@@ -20,6 +20,6 @@ if settings.startup["fmf-enable-duct-auto-join"].value then
   data.raw["storage-tank"]["duct-long"].placeable_by = { item = "duct-small", count = 4 }
 end
 
-require("prototypes.compatibility.bobsep")
+require("prototypes.compatibility.bobs-mods")
 require("prototypes.compatibility.space-exploration")
-require("prototypes.compatibility.SqueakThrough")
+require("prototypes.compatibility.sqeak-through-2")
