@@ -1,5 +1,3 @@
-local simulations = require("prototypes.simulations")
-
 data:extend({
   { type = "tips-and-tricks-item-category", name = "fluid-must-flow", order = "l-[fluid-must-flow]" },
   {
@@ -12,7 +10,7 @@ data:extend({
       type = "research",
       technology = "ducts",
     },
-    simulation = simulations.introduction,
+    simulation = { init_file = "__FluidMustFlow__/simulation-scripts/introduction.lua", mods = { "FluidMustFlow" } },
   },
   {
     type = "tips-and-tricks-item",
@@ -35,7 +33,7 @@ data:extend({
       count = 2,
     },
     dependencies = { "fmf-introduction" },
-    simulation = simulations.auto_join,
+    simulation = { init_file = "__FluidMustFlow__/simulation-scripts/auto-join.lua", mods = { "FluidMustFlow" } },
   },
   {
     type = "tips-and-tricks-item",
@@ -54,7 +52,7 @@ data:extend({
       count = 1,
     },
     dependencies = { "fmf-introduction" },
-    simulation = simulations.endpoints,
+    simulation = { init_file = "__FluidMustFlow__/simulation-scripts/endpoints.lua", mods = { "FluidMustFlow" } },
   },
   {
     type = "tips-and-tricks-item",
@@ -73,6 +71,6 @@ data:extend({
       count = 5,
     },
     dependencies = { "fmf-introduction" },
-    simulation = simulations.non_return_duct,
+    simulation = { init_file = "__FluidMustFlow__/simulation-scripts/non-return-duct.lua", mods = { "FluidMustFlow" } },
   },
 })
