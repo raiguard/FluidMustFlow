@@ -1,6 +1,6 @@
 local constants = require("prototypes.constants")
 
-if settings.startup["fmf-enable-duct-auto-join"].value then
+if not settings.startup["fmf-enable-duct-auto-join"].value then
   data:extend({
     {
       type = "recipe",
