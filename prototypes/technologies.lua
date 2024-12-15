@@ -74,7 +74,7 @@ data:extend({
     type = "technology",
     name = "ducts",
     icon = "__FluidMustFlow__/graphics/icons/technologies/ducts.png",
-    icon_size = 128,
+    icon_size = 256,
     upgrade = false,
     unit = {
       time = 20,
