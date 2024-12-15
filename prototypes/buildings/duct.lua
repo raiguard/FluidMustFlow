@@ -1,20 +1,15 @@
 local constants = require("prototypes.constants")
 
-if not settings.startup["fmf-enable-duct-auto-join"].value then
-  data:extend({
-    {
-      type = "recipe",
-      name = "duct",
-      enabled = false,
-      category = "crafting",
-      energy_required = 2.0,
-      ingredients = { { type = "item", name = "iron-plate", amount = 8 } },
-      results = { { type = "item", name = "duct", amount = 1 } },
-    },
-  })
-end
-
 data:extend({
+  {
+    type = "recipe",
+    name = "duct",
+    enabled = false,
+    category = "crafting",
+    energy_required = 2.0,
+    ingredients = { { type = "item", name = "iron-plate", amount = 8 } },
+    results = { { type = "item", name = "duct", amount = 1 } },
+  },
   {
     type = "item",
     name = "duct",

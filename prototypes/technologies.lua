@@ -5,6 +5,14 @@ local effects = {
   },
   {
     type = "unlock-recipe",
+    recipe = "duct",
+  },
+  {
+    type = "unlock-recipe",
+    recipe = "duct-long",
+  },
+  {
+    type = "unlock-recipe",
     recipe = "duct-t-junction",
   },
   {
@@ -33,16 +41,6 @@ local effects = {
   },
 }
 
-if not settings.startup["fmf-enable-duct-auto-join"].value then
-  table.insert(effects, {
-    type = "unlock-recipe",
-    recipe = "duct",
-  })
-  table.insert(effects, {
-    type = "unlock-recipe",
-    recipe = "duct-long",
-  })
-end
 
 --- Gets the first technology that unlocks the given recipe
 --- @param recipe_name string
