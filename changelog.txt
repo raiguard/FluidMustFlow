@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.4.2
 Date: ????
-  Changes:
+  Bugfixes:
+    - Fixed that duct and long duct items were visible in remote view when auto-join was disabled. (#34)
 ---------------------------------------------------------------------------------------------------
 Version: 1.4.1
 Date: 2024-12-05

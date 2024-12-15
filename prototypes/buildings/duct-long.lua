@@ -11,19 +11,19 @@ if not settings.startup["fmf-enable-duct-auto-join"].value then
       ingredients = { { type = "item", name = "iron-plate", amount = 16 } },
       results = { { type = "item", name = "duct-long", amount = 1 } },
     },
+    {
+      type = "item",
+      name = "duct-long",
+      icon = "__FluidMustFlow__/graphics/icons/buildings/duct-long.png",
+      subgroup = "energy-pipe-distribution",
+      order = "d[pipe]-c[duct-long]",
+      place_result = "duct-long",
+      stack_size = 50,
+    },
   })
 end
 
 data:extend({
-  {
-    type = "item",
-    name = "duct-long",
-    icon = "__FluidMustFlow__/graphics/icons/buildings/duct-long.png",
-    subgroup = "energy-pipe-distribution",
-    order = "d[pipe]-c[duct-long]",
-    place_result = "duct-long",
-    stack_size = 50,
-  },
   {
     type = "storage-tank",
     name = "duct-long",
