@@ -25,7 +25,7 @@ data:extend({
     type = "item",
     name = "duct-intake",
     icon = "__FluidMustFlow__/graphics/icons/buildings/duct-intake.png",
-    subgroup = "energy-pipe-distribution",
+    subgroup = "ducts",
     order = "d[pipe]-i[duct-intake]",
     place_result = "duct-intake",
     stack_size = 10,

@@ -14,7 +14,7 @@ data:extend({
     type = "item",
     name = "duct-underground",
     icon = "__FluidMustFlow__/graphics/icons/buildings/duct-to-ground.png",
-    subgroup = "energy-pipe-distribution",
+    subgroup = "ducts",
     order = "d[pipe]-d[duct-underground]",
     place_result = "duct-underground",
     stack_size = 50,

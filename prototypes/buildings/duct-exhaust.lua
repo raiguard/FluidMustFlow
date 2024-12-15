@@ -25,7 +25,7 @@ data:extend({
     type = "item",
     name = "duct-exhaust",
     icon = "__FluidMustFlow__/graphics/icons/buildings/duct-exhaust.png",
-    subgroup = "energy-pipe-distribution",
+    subgroup = "ducts",
     order = "d[pipe]-l[duct-exhaust]",
     place_result = "duct-exhaust",
     stack_size = 10,

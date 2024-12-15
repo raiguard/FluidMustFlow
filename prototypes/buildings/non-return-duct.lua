@@ -44,7 +44,7 @@ data:extend({
     type = "item",
     name = "non-return-duct",
     icon = "__FluidMustFlow__/graphics/icons/buildings/non-return-duct.png",
-    subgroup = "energy-pipe-distribution",
+    subgroup = "ducts",
     order = "d[pipe]-h[non-return-duct]",
     place_result = "non-return-duct",
     stack_size = 10,

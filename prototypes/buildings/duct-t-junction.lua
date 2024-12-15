@@ -21,7 +21,7 @@ data:extend({
     type = "item",
     name = "duct-t-junction",
     icon = "__FluidMustFlow__/graphics/icons/buildings/duct-t-junction.png",
-    subgroup = "energy-pipe-distribution",
+    subgroup = "ducts",
     order = "d[pipe]-e[duct-t-junction]",
     place_result = "duct-t-junction",
     stack_size = 50,

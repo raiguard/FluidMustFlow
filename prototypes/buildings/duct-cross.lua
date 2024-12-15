@@ -21,7 +21,7 @@ data:extend({
     type = "item",
     name = "duct-cross",
     icon = "__FluidMustFlow__/graphics/icons/buildings/duct-cross.png",
-    subgroup = "energy-pipe-distribution",
+    subgroup = "ducts",
     order = "d[pipe]-g[duct-cross]",
     place_result = "duct-cross",
     stack_size = 50,

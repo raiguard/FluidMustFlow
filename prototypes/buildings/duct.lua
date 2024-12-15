@@ -15,7 +15,7 @@ if not settings.startup["fmf-enable-duct-auto-join"].value then
       type = "item",
       name = "duct",
       icon = "__FluidMustFlow__/graphics/icons/buildings/duct.png",
-      subgroup = "energy-pipe-distribution",
+      subgroup = "ducts",
       order = "d[pipe]-b[duct]",
       place_result = "duct",
       stack_size = 50,
