@@ -7,6 +7,8 @@ Date: ????
     - Updated technology icon. (#36)
   Bugfixes:
     - Fixed that duct and long duct items were visible in remote view when auto-join was disabled. (#34)
+    - Fixed that ducts would not freeze. (#33)
+    - Fixed that ducts would not join when frozen.
 ---------------------------------------------------------------------------------------------------
 Version: 1.4.1
 Date: 2024-12-05

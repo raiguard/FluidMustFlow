@@ -39,6 +39,7 @@ data:extend({
     selection_box = { { -1, -1 }, { 1, 1 } },
     minable = { mining_time = 0.4, result = "duct-exhaust" },
     fast_replaceable_group = "duct-end-points",
+    heating_energy = feature_flags.freezing and "100kW" or nil,
     pumping_speed = 120,
     energy_source = {
       type = "electric",

@@ -28,6 +28,7 @@ data:extend({
     fast_replaceable_group = "ducts",
     collision_box = { { -0.79, -0.79 }, { 0.79, 0.7 } },
     selection_box = { { -1.0, -1.0 }, { 1.0, 1.0 } },
+    heating_energy = feature_flags.freezing and "100kW" or nil,
     fluid_box = {
       volume = constants.volume * 2,
       pipe_connections = {

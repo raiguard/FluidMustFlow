@@ -58,6 +58,7 @@ data:extend({
     fast_replaceable_group = "duct-intermediate-points",
     collision_box = { { -0.77, -0.9 }, { 0.77, 0.9 } },
     selection_box = { { -1, -1 }, { 1, 1 } },
+    heating_energy = feature_flags.freezing and "100kW" or nil,
     pumping_speed = 120,
     energy_source = { type = "void" },
     energy_usage = "1W",

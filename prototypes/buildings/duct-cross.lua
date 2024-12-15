@@ -35,6 +35,7 @@ data:extend({
     selection_box = { { -1, -1 }, { 1, 1 } },
     minable = { mining_time = 0.8, result = "duct-cross" },
     fast_replaceable_group = "ducts",
+    heating_energy = feature_flags.freezing and "100kW" or nil,
     fluid_box = {
       volume = constants.volume * 2,
       pipe_covers = nil,
