@@ -1,6 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.4.2
 Date: ????
+  Changes:
+    - Updated lighting on sprites to blend in better with other Factorio entities. (#36)
+    - Updated technology icon. (#36)
   Bugfixes:
     - Fixed that duct and long duct items were visible in remote view when auto-join was disabled. (#34)
 ---------------------------------------------------------------------------------------------------
