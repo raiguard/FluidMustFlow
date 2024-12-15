@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.4.2
-Date: ????
+Date: 2024-12-15
   Changes:
     - Moved ducts to a dedicated item subgroup. (#32)
     - Updated lighting on sprites to blend in better with other Factorio entities. (#36)
