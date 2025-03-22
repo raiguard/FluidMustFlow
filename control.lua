@@ -3,8 +3,6 @@ if not settings.startup["fmf-enable-duct-auto-join"].value then
   return
 end
 
--- The entire file below this point is copied in src/prototypes/tips-and-tricks.lua for the drag building simulation
-
 --- Calculates the midpoint between two positions.
 --- @param pos_1 MapPosition
 --- @param pos_2 MapPosition
