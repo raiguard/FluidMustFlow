@@ -1,4 +1,4 @@
-if not (mods["bobelectronics"] and mods["bobplates"]) then
+if not (mods["bobelectronics"] and mods["bobplates"] and mods["boblogistics"]) then
   return
 end
 
